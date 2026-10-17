@@ -19,7 +19,7 @@ Wanzi Sun\textsuperscript{2,3}\thanks{Corresponding author. \href{mailto:wzsun@j
 \small\textsuperscript{2}Beijing National Laboratory for Condensed Matter Physics,\\
 \small Institute of Physics, Chinese Academy of Sciences, Beijing 100190, China\\
 \small\textsuperscript{3}Jining University, Qufu, Shandong 273155, China}
-\date{October 10, 2026; working draft}
+\date{October 10, 2026}
 \begin{document}
 \maketitle
 
@@ -60,9 +60,9 @@ where $p$ abbreviates the whole conditional table, the two superscripted tables 
 
 Purifiability here has the general higher-order meaning~\cite{purif}: the original process is obtained from a pure process with an added finite global past $P$ and future $F$, by inserting a fixed pure state in $P$ and tracing $F$. Their dimensions are unrestricted and are not identified with $\operatorname{rank}W$. A pure process preserves unitarity: inserting local unitary operations, including their local ancillary extensions, yields a global unitary transformation.
 
-\section{Proof map and the roles of exact verification}
+\section{Outline of the proof}
 \label{sec:proof-map}
-The universal statement is about every complete finite experiment, not about a list of tested causal games. Table~\ref{tab:proof-map} identifies the reductions that supply its physical coverage. Algebraic verification checks the final identities and positive weights; the reductions below prove that the identities apply to the original experiments. Finite complex controls detect convention errors but do not establish the universal quantifiers.
+Table~\ref{tab:proof-map} summarizes the reductions from arbitrary finite laboratory experiments to the operator inequality used below. These reductions preserve the Born probabilities and instrument normalization. The exact identity and positive weights then establish the bound in every finite representation. Numerical tests with complex instruments check the conventions, while the analytic reductions establish the full scope of the result.
 
 \begin{table}[ht]
 \centering\small
@@ -474,7 +474,7 @@ One further doubling gives
 where $A_{s,o}$ are the amplitudes embedded in the doubled space and $J_2$ its input embedding. This preserves the common output range and enforces
 $A_{s,o}A_{t,p}=0$ and $A_{s,o}^\dagger J_2=0$ for all sector labels $s,t$ and output-basis indices $o,p$. This gives the state-supported 45-word Gram basis of the canonical relaxation. These relations apply to this representation, not to arbitrary original event matrices. The small certificate of Section~\ref{sec:sos} does not need this construction.
 
-The independent rational verifier checks $10\,960$ canonical dual equations, exact upper bound zero, and positivity of its supported cone blocks. It separately reconstructs the small SOS from the original Pauli contraction, finding $48$ nonzero target words and zero residual words. The complete finite-dimensional proof above supplies physical coverage and all transportation cuts. Numerical examples are convention and implementation checks rather than a substitute for this proof.
+The independent rational verifier checks $10\,960$ canonical dual equations, an exact upper bound of zero, and positivity of the supported cone blocks. It also reconstructs the small SOS identity from the original Pauli contraction: the target polynomial contains $48$ nonzero words, and the coefficient residual vanishes identically. The finite-dimensional proof above extends the Hall bound to arbitrary finite-dimensional shared states and all local instruments and establishes all transportation cuts. The numerical examples check the conventions and implementation; the general result follows from this proof.
 
 \section{Exact classification on the white-noise line}
 Let
@@ -602,9 +602,9 @@ The conclusions concern finite original qubit ports and arbitrary finite shared-
 
 The package supplies the original eleven-block certificate in
 \path{results/exact_double_flag_hall_sos.json}, its symmetry average in
-\path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The three TeX fragments used above are generated directly from those rational data. Exporting an unchanged certificate preserves its frozen bytes and metadata; changed data require a new output directory.
+\path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The three TeX fragments used above are generated directly from those rational data.
 
-From the project root, the following commands verify both small certificates using an implementation based on Python's standard-library \texttt{Fraction}. They do not import the optimizer or the science generator:
+From the project root, the following commands verify both small certificates using Python's standard-library \texttt{Fraction} arithmetic, independently of the optimization used to obtain them:
 \begingroup\small
 \begin{verbatim}
 python -m repro.independent_general_ec_certificate_audit \
@@ -625,9 +625,9 @@ python results/literature_scope/independent_two_certificate_ec_audit.py
 python results/literature_scope/independent_ec_physical_coverage_audit.py
 \end{verbatim}
 \endgroup
-Regeneration uses the supplied project environment with SymPy, NumPy, SciPy, and CVXPY. It performs only exact algebra on the saved certificate, not an optimization. Each exact audit records certificate and verifier SHA256 hashes, equation residuals, and positive rational pivots or determinants.
+Regenerating the tables requires SymPy, NumPy, SciPy, and CVXPY. The calculation evaluates the supplied rational coefficients exactly, without further optimization. The verification reports equation residuals and the rational pivots or determinants that establish positivity.
 
-Independent finite complex mixed-state controls compare the original Born table with Eq.~\eqref{eq:kernel}, perform flag refinement, enumerate all subset cuts, and solve the transportation problem. They include several Kraus branches per report and unequal ancillary dimensions. A deliberately inserted extra transpose fails these controls. The checked examples have Born-reduction residuals below $5\times10^{-17}$ and transportation residuals below $2\times10^{-15}$. Source-hashed computing-node replication runs the same exact certificates; its role is reproducibility, while Eqs.~\eqref{eq:SOS-identity} and \eqref{eq:flow-cuts} establish the universal claim.
+Finite numerical tests with complex mixed states compare the original Born table with Eq.~\eqref{eq:kernel}, refine the flags, enumerate every subset cut, and solve the transportation problem. The tests include multiple Kraus branches per report and unequal ancillary dimensions. Inserting an additional transpose makes the two probability calculations disagree. The Born-reduction residuals are below $5\times10^{-17}$ and the transportation residuals below $2\times10^{-15}$. These tests check the Choi convention and its implementation; the dimension-independent result follows from Eqs.~\eqref{eq:SOS-identity} and \eqref{eq:flow-cuts}.
 
 The portable distribution provides a single entry point, \texttt{verify.py}, and requires only Python and SymPy. It checks the two exact SOS certificates, process validity, the witness, the ordered decomposition along every valid Pauli basis direction, and the neighborhood constants. All checks use the supplied rational data and require neither optimization nor certificate regeneration. The reductions and proofs in Sections~\ref{sec:proof-map}--\ref{sec:robustness} establish coverage of arbitrary finite laboratory experiments; the pure-process structure theorem~\cite{Yokojima,Cyclic} supplies the link between causal nonseparability and the exclusion of finite pure dilations.
 
