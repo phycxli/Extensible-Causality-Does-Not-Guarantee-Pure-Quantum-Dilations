@@ -1,0 +1,13 @@
+README.txt -text
+SHA256SUMS.txt -text
+verify.py -text
+environment/** -text
+main/** -text
+repro/** -text
+results/** -text
+supplement/** -text
+tests/** -text
+README.md text eol=lf
+CITATION.cff text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

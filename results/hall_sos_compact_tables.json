@@ -1,0 +1,1221 @@
+{
+  "schema": "exact-Hall-SOS-compact-integer-tables-v1",
+  "q": "49/80",
+  "theta": "3/25",
+  "certificate": "results\\exact_double_flag_hall_sos_symmetric.json",
+  "source_certificate_sha256": "44e2f5d876e27aefbf2bcb6337f7756fe80305a9d578749dd3456dda4828010f",
+  "common_denominator": 4000000,
+  "maximum_block_size": 4,
+  "blocks": [
+    {
+      "name": "scalar_Bob_traceless_complement_Gram",
+      "source_block": "scalar_Bob_traceless_complement_Gram",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "421/500000",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "337/400000",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "337/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "421/500000",
+        "337/400000",
+        "337/400000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 0,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          3368,
+          0,
+          0
+        ],
+        [
+          0,
+          3370,
+          0
+        ],
+        [
+          0,
+          0,
+          3370
+        ]
+      ],
+      "symbol": "N_{0}"
+    },
+    {
+      "name": "flag_0_forward_complement_Gram_even",
+      "source_block": "flag_0_forward_complement_Gram",
+      "basis_transform": "u_i=v_rep_i+v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "partner_indices": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "weight": [
+        [
+          "15061/160000",
+          "0",
+          "0",
+          "4019/400000"
+        ],
+        [
+          "0",
+          "821/20000",
+          "0",
+          "17833/400000"
+        ],
+        [
+          "0",
+          "0",
+          "67267/800000",
+          "0"
+        ],
+        [
+          "4019/400000",
+          "17833/400000",
+          "0",
+          "20439/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "8038/75305",
+          "17833/16420",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "15061/160000",
+        "821/20000",
+        "67267/800000",
+        "158871799903/98920648000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 1,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          376525,
+          0,
+          0,
+          40190
+        ],
+        [
+          0,
+          164200,
+          0,
+          178330
+        ],
+        [
+          0,
+          0,
+          336335,
+          0
+        ],
+        [
+          40190,
+          178330,
+          0,
+          204390
+        ]
+      ],
+      "symbol": "N_{1}"
+    },
+    {
+      "name": "flag_0_forward_complement_Gram_odd",
+      "source_block": "flag_0_forward_complement_Gram",
+      "basis_transform": "u_i=v_rep_i-v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "partner_indices": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "weight": [
+        [
+          "15061/160000",
+          "0",
+          "0",
+          "4019/400000"
+        ],
+        [
+          "0",
+          "821/20000",
+          "0",
+          "-17833/400000"
+        ],
+        [
+          "0",
+          "0",
+          "67267/800000",
+          "0"
+        ],
+        [
+          "4019/400000",
+          "-17833/400000",
+          "0",
+          "20439/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "8038/75305",
+          "-17833/16420",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "15061/160000",
+        "821/20000",
+        "67267/800000",
+        "158871799903/98920648000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 2,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          376525,
+          0,
+          0,
+          40190
+        ],
+        [
+          0,
+          164200,
+          0,
+          -178330
+        ],
+        [
+          0,
+          0,
+          336335,
+          0
+        ],
+        [
+          40190,
+          -178330,
+          0,
+          204390
+        ]
+      ],
+      "symbol": "N_{2}"
+    },
+    {
+      "name": "flag_0_Alice_slack_Bob_Gram_even",
+      "source_block": "flag_0_Alice_slack_Bob_Gram",
+      "basis_transform": "u_i=v_rep_i+v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "partner_indices": [
+        3,
+        2,
+        7,
+        6
+      ],
+      "weight": [
+        [
+          "191947/4000000",
+          "109881/4000000",
+          "4019/200000",
+          "0"
+        ],
+        [
+          "109881/4000000",
+          "111567/4000000",
+          "0",
+          "0"
+        ],
+        [
+          "4019/200000",
+          "0",
+          "191947/4000000",
+          "-109881/4000000"
+        ],
+        [
+          "0",
+          "0",
+          "-109881/4000000",
+          "111567/4000000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "109881/191947",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "80380/191947",
+          "-736019565/778426399",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-28511423716173/29782532228651",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "191947/4000000",
+        "2335279197/191947000000",
+        "89347596685953/3113705596000000",
+        "5933875743659397/3722816528581375000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 3,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          191947,
+          109881,
+          80380,
+          0
+        ],
+        [
+          109881,
+          111567,
+          0,
+          0
+        ],
+        [
+          80380,
+          0,
+          191947,
+          -109881
+        ],
+        [
+          0,
+          0,
+          -109881,
+          111567
+        ]
+      ],
+      "symbol": "N_{3}"
+    },
+    {
+      "name": "flag_0_Alice_slack_Bob_Gram_odd",
+      "source_block": "flag_0_Alice_slack_Bob_Gram",
+      "basis_transform": "u_i=v_rep_i-v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "partner_indices": [
+        3,
+        2,
+        7,
+        6
+      ],
+      "weight": [
+        [
+          "111567/4000000",
+          "109881/4000000",
+          "0",
+          "0"
+        ],
+        [
+          "109881/4000000",
+          "111567/4000000",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "111567/4000000",
+          "-109881/4000000"
+        ],
+        [
+          "0",
+          "0",
+          "-109881/4000000",
+          "111567/4000000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "36627/37189",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-36627/37189",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "111567/4000000",
+        "7778361/9297250000",
+        "111567/4000000",
+        "7778361/9297250000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 4,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          111567,
+          109881,
+          0,
+          0
+        ],
+        [
+          109881,
+          111567,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          111567,
+          -109881
+        ],
+        [
+          0,
+          0,
+          -109881,
+          111567
+        ]
+      ],
+      "symbol": "N_{4}"
+    },
+    {
+      "name": "flag_0_Bob_complement_localizer",
+      "source_block": "flag_0_Bob_complement_localizer",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "9907/400000",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2167/200000",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "9907/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "9907/400000",
+        "2167/200000",
+        "9907/400000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 5,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          99070,
+          0,
+          0
+        ],
+        [
+          0,
+          43340,
+          0
+        ],
+        [
+          0,
+          0,
+          99070
+        ]
+      ],
+      "symbol": "N_{5}"
+    },
+    {
+      "name": "flag_0_Bob_label_0_slack_product",
+      "source_block": "flag_0_Bob_label_0_slack_product",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "41803/2000000",
+          "40119/2000000"
+        ],
+        [
+          "40119/2000000",
+          "41803/2000000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "40119/41803",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "41803/2000000",
+        "17244581/10450750000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 6,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          83606,
+          80238
+        ],
+        [
+          80238,
+          83606
+        ]
+      ],
+      "symbol": "N_{6}"
+    },
+    {
+      "name": "flag_0_Bob_label_1_slack_product",
+      "source_block": "flag_0_Bob_label_1_slack_product",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "41803/2000000",
+          "-40119/2000000"
+        ],
+        [
+          "-40119/2000000",
+          "41803/2000000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-40119/41803",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "41803/2000000",
+        "17244581/10450750000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 7,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          83606,
+          -80238
+        ],
+        [
+          -80238,
+          83606
+        ]
+      ],
+      "symbol": "N_{7}"
+    },
+    {
+      "name": "flag_1_forward_complement_Gram_even",
+      "source_block": "flag_1_forward_complement_Gram",
+      "basis_transform": "u_i=v_rep_i+v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "partner_indices": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "weight": [
+        [
+          "38307/400000",
+          "0",
+          "0",
+          "-19253/2000000"
+        ],
+        [
+          "0",
+          "223259/4000000",
+          "0",
+          "99157/2000000"
+        ],
+        [
+          "0",
+          "0",
+          "423259/4000000",
+          "0"
+        ],
+        [
+          "-19253/2000000",
+          "99157/2000000",
+          "0",
+          "18307/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-19253/191535",
+          "198314/223259",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "38307/400000",
+        "223259/4000000",
+        "423259/4000000",
+        "32533919356757/42761912565000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 8,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          383070,
+          0,
+          0,
+          -38506
+        ],
+        [
+          0,
+          223259,
+          0,
+          198314
+        ],
+        [
+          0,
+          0,
+          423259,
+          0
+        ],
+        [
+          -38506,
+          198314,
+          0,
+          183070
+        ]
+      ],
+      "symbol": "N_{8}"
+    },
+    {
+      "name": "flag_1_forward_complement_Gram_odd",
+      "source_block": "flag_1_forward_complement_Gram",
+      "basis_transform": "u_i=v_rep_i-v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "partner_indices": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "weight": [
+        [
+          "38307/400000",
+          "0",
+          "0",
+          "-19253/2000000"
+        ],
+        [
+          "0",
+          "223259/4000000",
+          "0",
+          "-99157/2000000"
+        ],
+        [
+          "0",
+          "0",
+          "423259/4000000",
+          "0"
+        ],
+        [
+          "-19253/2000000",
+          "-99157/2000000",
+          "0",
+          "18307/400000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-19253/191535",
+          "-198314/223259",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "38307/400000",
+        "223259/4000000",
+        "423259/4000000",
+        "32533919356757/42761912565000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 9,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          383070,
+          0,
+          0,
+          -38506
+        ],
+        [
+          0,
+          223259,
+          0,
+          -198314
+        ],
+        [
+          0,
+          0,
+          423259,
+          0
+        ],
+        [
+          -38506,
+          -198314,
+          0,
+          183070
+        ]
+      ],
+      "symbol": "N_{9}"
+    },
+    {
+      "name": "flag_1_Alice_slack_Bob_Gram_even",
+      "source_block": "flag_1_Alice_slack_Bob_Gram",
+      "basis_transform": "u_i=v_rep_i+v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "partner_indices": [
+        3,
+        2,
+        7,
+        6
+      ],
+      "weight": [
+        [
+          "11033/400000",
+          "-108517/4000000",
+          "113/4000000",
+          "0"
+        ],
+        [
+          "-108517/4000000",
+          "7561/160000",
+          "0",
+          "9851/500000"
+        ],
+        [
+          "113/4000000",
+          "0",
+          "11033/400000",
+          "108517/4000000"
+        ],
+        [
+          "0",
+          "9851/500000",
+          "108517/4000000",
+          "7561/160000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-108517/110330",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "113/110330",
+          "12262421/9079188961",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "8694886640/9079188961",
+          "984279971606669/1001704504406905",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "11033/400000",
+        "9079188961/441320000000",
+        "200340900881381/7263351168800000",
+        "439998637994828089/250426126101726250000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 10,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          110330,
+          -108517,
+          113,
+          0
+        ],
+        [
+          -108517,
+          189025,
+          0,
+          78808
+        ],
+        [
+          113,
+          0,
+          110330,
+          108517
+        ],
+        [
+          0,
+          78808,
+          108517,
+          189025
+        ]
+      ],
+      "symbol": "N_{10}"
+    },
+    {
+      "name": "flag_1_Alice_slack_Bob_Gram_odd",
+      "source_block": "flag_1_Alice_slack_Bob_Gram",
+      "basis_transform": "u_i=v_rep_i-v_partner_i",
+      "representative_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "partner_indices": [
+        3,
+        2,
+        7,
+        6
+      ],
+      "weight": [
+        [
+          "93671/2000000",
+          "-108517/4000000",
+          "617/32000",
+          "0"
+        ],
+        [
+          "-108517/4000000",
+          "7561/160000",
+          "0",
+          "9851/500000"
+        ],
+        [
+          "617/32000",
+          "0",
+          "93671/2000000",
+          "108517/4000000"
+        ],
+        [
+          "0",
+          "9851/500000",
+          "108517/4000000",
+          "7561/160000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-108517/187342",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "77125/187342",
+          "8369373625/23636382261",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "14764048336/23636382261",
+          "1905375697177937/3303716215774637",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "93671/2000000",
+        "23636382261/749368000000",
+        "3303716215774637/94545529044000000",
+        "770650065828403909/33037162157746370000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 11,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          187342,
+          -108517,
+          77125,
+          0
+        ],
+        [
+          -108517,
+          189025,
+          0,
+          78808
+        ],
+        [
+          77125,
+          0,
+          187342,
+          108517
+        ],
+        [
+          0,
+          78808,
+          108517,
+          189025
+        ]
+      ],
+      "symbol": "N_{11}"
+    },
+    {
+      "name": "flag_1_Bob_complement_localizer",
+      "source_block": "flag_1_Bob_complement_localizer",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "843/1000000",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "843/1000000",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "843/1000000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "843/1000000",
+        "843/1000000",
+        "843/1000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 12,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          3372,
+          0,
+          0
+        ],
+        [
+          0,
+          3372,
+          0
+        ],
+        [
+          0,
+          0,
+          3372
+        ]
+      ],
+      "symbol": "N_{12}"
+    },
+    {
+      "name": "flag_1_Bob_label_0_slack_product",
+      "source_block": "flag_1_Bob_label_0_slack_product",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "2171/100000",
+          "-41483/2000000"
+        ],
+        [
+          "-41483/2000000",
+          "2171/100000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-3191/3340",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "2171/100000",
+        "12650547/6680000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 13,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          86840,
+          -82966
+        ],
+        [
+          -82966,
+          86840
+        ]
+      ],
+      "symbol": "N_{13}"
+    },
+    {
+      "name": "flag_1_Bob_label_1_slack_product",
+      "source_block": "flag_1_Bob_label_1_slack_product",
+      "basis_transform": "identity",
+      "weight": [
+        [
+          "2171/100000",
+          "41483/2000000"
+        ],
+        [
+          "41483/2000000",
+          "2171/100000"
+        ]
+      ],
+      "LDL_lower": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "3191/3340",
+          "1"
+        ]
+      ],
+      "LDL_positive_diagonal": [
+        "2171/100000",
+        "12650547/6680000000"
+      ],
+      "exact_positive_definite": true,
+      "table_index": 14,
+      "common_denominator": 4000000,
+      "integer_numerator": [
+        [
+          86840,
+          82966
+        ],
+        [
+          82966,
+          86840
+        ]
+      ],
+      "symbol": "N_{14}"
+    }
+  ],
+  "block_reconstruction_exact": true,
+  "coefficient_identity_exact": true,
+  "all_blocks_exact_positive_definite": true
+}

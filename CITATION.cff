@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this repository and the accompanying manuscript when using these certificates or verifiers."
+type: software
+title: "Extensible Causality Does Not Guarantee Pure Quantum Dilations: Exact Verification Code"
+authors:
+  - family-names: Li
+    given-names: Chengxi
+  - family-names: Zhu
+    given-names: Hao
+  - family-names: Sun
+    given-names: Wanzi
+    email: wzsun@jnxy.edu.cn
+repository-code: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
+url: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
+license: MIT
+abstract: "Saved rational certificates and independent exact verifiers for a full-rank bipartite qubit process that is extensibly causal but has no finite pure-process dilation, with an exact white-noise threshold and a conservative perturbation neighborhood."

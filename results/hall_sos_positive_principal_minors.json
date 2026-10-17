@@ -1,0 +1,336 @@
+{
+  "schema": "exact-Hall-SOS-leading-principal-minors-v1",
+  "source_table": "results\\hall_sos_compact_tables.json",
+  "source_table_sha256": "0d8342c1ddbff50a6c59837c45ce6a16e3fc9d96d672cfd5103d8cc97f6a4742",
+  "common_denominator": 4000000,
+  "blocks": [
+    {
+      "table_index": 0,
+      "name": "scalar_Bob_traceless_complement_Gram",
+      "side": 3,
+      "integer_numerator_leading_determinants": [
+        "3368",
+        "11350160",
+        "38250039200"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "3368",
+        "3370",
+        "3370"
+      ],
+      "weight_LDL_pivots": [
+        "421/500000",
+        "337/400000",
+        "337/400000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 1,
+      "name": "flag_0_forward_complement_Gram_even",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "376525",
+        "61825405000",
+        "20794047590675000",
+        "133585367050938762500"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "376525",
+        "164200",
+        "336335",
+        "158871799903/24730162"
+      ],
+      "weight_LDL_pivots": [
+        "15061/160000",
+        "821/20000",
+        "67267/800000",
+        "158871799903/98920648000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 2,
+      "name": "flag_0_forward_complement_Gram_odd",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "376525",
+        "61825405000",
+        "20794047590675000",
+        "133585367050938762500"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "376525",
+        "164200",
+        "336335",
+        "158871799903/24730162"
+      ],
+      "weight_LDL_pivots": [
+        "15061/160000",
+        "821/20000",
+        "67267/800000",
+        "158871799903/98920648000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 3,
+      "name": "flag_0_Alice_slack_Bob_Gram_even",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "191947",
+        "9341116788",
+        "1072171160231436",
+        "6835824856695625344"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "191947",
+        "9341116788/191947",
+        "89347596685953/778426399",
+        "189884023797100704/29782532228651"
+      ],
+      "weight_LDL_pivots": [
+        "191947/4000000",
+        "2335279197/191947000000",
+        "89347596685953/3113705596000000",
+        "5933875743659397/3722816528581375000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 4,
+      "name": "flag_0_Alice_slack_Bob_Gram_odd",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "111567",
+        "373361328",
+        "41654803280976",
+        "139398681245923584"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "111567",
+        "124453776/37189",
+        "111567",
+        "124453776/37189"
+      ],
+      "weight_LDL_pivots": [
+        "111567/4000000",
+        "7778361/9297250000",
+        "111567/4000000",
+        "7778361/9297250000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 5,
+      "name": "flag_0_Bob_complement_localizer",
+      "side": 3,
+      "integer_numerator_leading_determinants": [
+        "99070",
+        "4293693800",
+        "425376244766000"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "99070",
+        "43340",
+        "99070"
+      ],
+      "weight_LDL_pivots": [
+        "9907/400000",
+        "2167/200000",
+        "9907/400000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 6,
+      "name": "flag_0_Bob_label_0_slack_product",
+      "side": 2,
+      "integer_numerator_leading_determinants": [
+        "83606",
+        "551826592"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "83606",
+        "275913296/41803"
+      ],
+      "weight_LDL_pivots": [
+        "41803/2000000",
+        "17244581/10450750000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 7,
+      "name": "flag_0_Bob_label_1_slack_product",
+      "side": 2,
+      "integer_numerator_leading_determinants": [
+        "83606",
+        "551826592"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "83606",
+        "275913296/41803"
+      ],
+      "weight_LDL_pivots": [
+        "41803/2000000",
+        "17244581/10450750000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 8,
+      "name": "flag_1_forward_complement_Gram_even",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "383070",
+        "85523825130",
+        "36198728700698670",
+        "110162193384172888504"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "383070",
+        "223259",
+        "423259",
+        "130135677427028/42761912565"
+      ],
+      "weight_LDL_pivots": [
+        "38307/400000",
+        "223259/4000000",
+        "423259/4000000",
+        "32533919356757/42761912565000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 9,
+      "name": "flag_1_forward_complement_Gram_odd",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "383070",
+        "85523825130",
+        "36198728700698670",
+        "110162193384172888504"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "383070",
+        "223259",
+        "423259",
+        "130135677427028/42761912565"
+      ],
+      "weight_LDL_pivots": [
+        "38307/400000",
+        "223259/4000000",
+        "423259/4000000",
+        "32533919356757/42761912565000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 10,
+      "name": "flag_1_Alice_slack_Bob_Gram_even",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "110330",
+        "9079188961",
+        "1001704504406905",
+        "7039978207917249424"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "110330",
+        "9079188961/110330",
+        "1001704504406905/9079188961",
+        "7039978207917249424/1001704504406905"
+      ],
+      "weight_LDL_pivots": [
+        "11033/400000",
+        "9079188961/441320000000",
+        "200340900881381/7263351168800000",
+        "439998637994828089/250426126101726250000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 11,
+      "name": "flag_1_Alice_slack_Bob_Gram_odd",
+      "side": 4,
+      "integer_numerator_leading_determinants": [
+        "187342",
+        "23636382261",
+        "3303716215774637",
+        "308260026331361563600"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "187342",
+        "23636382261/187342",
+        "3303716215774637/23636382261",
+        "308260026331361563600/3303716215774637"
+      ],
+      "weight_LDL_pivots": [
+        "93671/2000000",
+        "23636382261/749368000000",
+        "3303716215774637/94545529044000000",
+        "770650065828403909/33037162157746370000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 12,
+      "name": "flag_1_Bob_complement_localizer",
+      "side": 3,
+      "integer_numerator_leading_determinants": [
+        "3372",
+        "11370384",
+        "38340934848"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "3372",
+        "3372",
+        "3372"
+      ],
+      "weight_LDL_pivots": [
+        "843/1000000",
+        "843/1000000",
+        "843/1000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 13,
+      "name": "flag_1_Bob_label_0_slack_product",
+      "side": 2,
+      "integer_numerator_leading_determinants": [
+        "86840",
+        "657828444"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "86840",
+        "12650547/1670"
+      ],
+      "weight_LDL_pivots": [
+        "2171/100000",
+        "12650547/6680000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    },
+    {
+      "table_index": 14,
+      "name": "flag_1_Bob_label_1_slack_product",
+      "side": 2,
+      "integer_numerator_leading_determinants": [
+        "86840",
+        "657828444"
+      ],
+      "integer_numerator_LDL_pivots": [
+        "86840",
+        "12650547/1670"
+      ],
+      "weight_LDL_pivots": [
+        "2171/100000",
+        "12650547/6680000000"
+      ],
+      "exact_Sylvester_positive_definite": true
+    }
+  ],
+  "all_fifteen_integer_numerators_exact_positive_definite": true
+}
