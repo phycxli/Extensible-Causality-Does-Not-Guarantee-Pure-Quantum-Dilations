@@ -13,7 +13,7 @@
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thetable}{S\arabic{table}}
 \title{Supplemental Material:\\Extensible Causality Does Not Guarantee Pure Quantum Dilations}
-\author{Chengxi Li\textsuperscript{1,2}, Hao Zhu\textsuperscript{1,2}, and
+\author{Chengxi Li\textsuperscript{1,2}, Hao Zhu\textsuperscript{1,2}, Kai Liu\textsuperscript{2}, and
 Wanzi Sun\textsuperscript{2,3}\thanks{Corresponding author. \href{mailto:wzsun@jnxy.edu.cn}{wzsun@jnxy.edu.cn}}\\[0.5em]
 \small\textsuperscript{1}Beijing Institute of Petrochemical Technology, Beijing 102617, China\\
 \small\textsuperscript{2}Beijing National Laboratory for Condensed Matter Physics,\\
@@ -37,10 +37,10 @@ where $p(a,b|x,y)$ is the joint conditional probability, $\Omega^{A'B'}$ the sha
 The Choi convention matters for complex operations. For a CP map $\mathcal E$, define its standard Choi matrix $J_{\mathcal E}$ and the matrix $M_{\mathcal E}$ used in Eq.~\eqref{eq:born} by
 \begin{equation}
  J_{\mathcal E}=\sum_{i,j}|i\rangle\langle j|\otimes
- \mathcal E(|i\rangle\langle j|),\qquad M_{\mathcal E}=J_{\mathcal E}^{T}.
+ \mathcal E(|i\rangle\langle j|),\qquad M_{\mathcal E}=J_{\mathcal E}^{T},
  \label{eq:choi-convention}
 \end{equation}
-Here $|i\rangle,|j\rangle$ are input computational-basis vectors and the sum runs over that basis. The superscript $T$ is the full transpose in the input--output product basis, $*$ denotes entrywise complex conjugation, and $\dagger$ below denotes the Hermitian adjoint. Equivalently, $M_{\mathcal E}=J_{\mathcal E}^*$, since $J_{\mathcal E}$ is Hermitian. Thus $M_{\mathcal E}\succeq0$ and $\Tr_O M_{\mathcal E}=I_I$ for a channel, where $\Tr_O$ traces out the output and $I_I$ is the input identity. Equation~\eqref{eq:born} contains no additional transpose.
+where $|i\rangle,|j\rangle$ are input computational-basis vectors and the sum runs over that basis. The superscript $T$ is the full transpose in the input--output product basis, $*$ denotes entrywise complex conjugation, and $\dagger$ below denotes the Hermitian adjoint. Equivalently, $M_{\mathcal E}=J_{\mathcal E}^*$, since $J_{\mathcal E}$ is Hermitian. Thus $M_{\mathcal E}\succeq0$ and $\Tr_O M_{\mathcal E}=I_I$ for a channel, where $\Tr_O$ traces out the output and $I_I$ is the input identity. Equation~\eqref{eq:born} contains no additional transpose.
 
 For an operator $Q$ and a tensor factor $T$ of dimension $d_T$, the replacement map \({}_T Q\) traces out $T$ and reinserts the normalized identity $I_T/d_T$. Multiple labels indicate replacement of all listed factors. With trivial original global past and future, the bipartite process constraints~\cite{OCB,EC} are positivity, $\Tr W=d_{A_O}d_{B_O}=4$, and
 \begin{align}
@@ -49,7 +49,7 @@ For an operator $Q$ and a tensor factor $T$ of dimension $d_T$, the replacement 
  W&={}_{A_O}W+{}_{B_O}W-{}_{A_OB_O}W.
  \label{eq:process-subspace}
 \end{align}
-Here $A\prec B$ denotes Alice before Bob and $B\prec A$ the reverse order. An $A\prec B$ process additionally obeys \({}_{B_O}W=W\); a $B\prec A$ process obeys \({}_{A_O}W=W\). Causal separability (CS) means a sum of positive, possibly subnormalized, processes of these orders.
+The notation $A\prec B$ denotes Alice before Bob and $B\prec A$ the reverse order. An $A\prec B$ process additionally obeys \({}_{B_O}W=W\); a $B\prec A$ process obeys \({}_{A_O}W=W\). Causal separability (CS) means a sum of positive, possibly subnormalized, processes of these orders.
 
 A normalized conditional distribution is causal if
 \begin{equation}
@@ -58,7 +58,7 @@ A normalized conditional distribution is causal if
 \end{equation}
 where $p$ abbreviates the whole conditional table, the two superscripted tables are normalized distributions for the indicated orders, and $q$ is the probability of the Alice-first branch. It is independent of $x,y$. Subscripts $A,B$ on a distribution denote its Alice and Bob marginals: $p_A^{A\prec B}$ is independent of $y$, and $p_B^{B\prec A}$ independent of $x$. A process is extensibly causal (EC) if this holds for every finite shared input state and every finite collection of local instruments, settings, and outcomes~\cite{EC}. The decomposition may depend on the experiment. Extensible causal separability is a stronger operator property~\cite{Wechs,Wei}; it is not the premise of our theorem.
 
-Purifiability here has the general higher-order meaning~\cite{purif}: the original process is obtained from a pure process with an added finite global past $P$ and future $F$, by inserting a fixed pure state in $P$ and tracing $F$. Their dimensions are unrestricted and are not identified with $\operatorname{rank}W$. Here a pure process preserves unitarity: inserting local unitary operations, including their local ancillary extensions, yields a global unitary transformation.
+Purifiability here has the general higher-order meaning~\cite{purif}: the original process is obtained from a pure process with an added finite global past $P$ and future $F$, by inserting a fixed pure state in $P$ and tracing $F$. Their dimensions are unrestricted and are not identified with $\operatorname{rank}W$. A pure process preserves unitarity: inserting local unitary operations, including their local ancillary extensions, yields a global unitary transformation.
 
 \section{Proof map and the roles of exact verification}
 \label{sec:proof-map}
@@ -88,18 +88,18 @@ The process in the main text is
 \begin{equation}
  W_* =\frac14\left[I+\frac15\sigma_z^{A_I}
  +\frac3{10}\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}
- +\frac15\sum_{k=x,y,z}\sigma_k^{A_O}\sigma_k^{B_I}\right].
+ +\frac15\sum_{k=x,y,z}\sigma_k^{A_O}\sigma_k^{B_I}\right],
  \label{eq:Wstar}
 \end{equation}
-Here $k$ labels the three Pauli axes, and the asterisk labels the chosen counterexample. Every nonidentity term lies in the linear subspace~\eqref{eq:process-subspace}; all are traceless, so $\Tr W_*=4$. To check positivity, first fix the eigenvalues $s=\pm1$ of $\sigma_z^{A_I}$ and $j=\pm1$ of $\sigma_z^{B_O}$. On $A_OB_I$, $\sigma_x\otimes\sigma_x$ is conserved. In its sector $t=\pm1$, the remaining eigenvalues are
+where $k$ labels the three Pauli axes, and the asterisk labels the chosen counterexample. Every nonidentity term lies in the linear subspace~\eqref{eq:process-subspace}; all are traceless, so $\Tr W_*=4$. To check positivity, first fix the eigenvalues $s=\pm1$ of $\sigma_z^{A_I}$ and $j=\pm1$ of $\sigma_z^{B_O}$. On $A_OB_I$, $\sigma_x\otimes\sigma_x$ is conserved. In its sector $t=\pm1$, the remaining eigenvalues are
 \begin{equation}
  \lambda_{s,t,\pm}=
  \frac{1+s\delta+t\beta\pm
  \sqrt{\alpha^2+\beta^2(1-t)^2}}4,
- \quad (\delta,\alpha,\beta)=\left(\frac15,\frac3{10},\frac15\right).
+ \quad (\delta,\alpha,\beta)=\left(\frac15,\frac3{10},\frac15\right),
  \label{eq:spectrum-formula}
 \end{equation}
-Here $\delta,\alpha,\beta$ are the coefficients of $\sigma_z^{A_I}$, $\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}$, and the three-term Pauli sum, respectively; $\lambda_{s,t,\pm}$ labels the two eigenvalue branches in each sector. They do not depend on $j$. The full spectrum, with multiplicities in parentheses, is
+where $\delta,\alpha,\beta$ are the coefficients of $\sigma_z^{A_I}$, $\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}$, and the three-term Pauli sum, respectively; $\lambda_{s,t,\pm}$ labels the two eigenvalue branches in each sector. They do not depend on $j$. The full spectrum, with multiplicities in parentheses, is
 \begin{equation}
  \frac1{40}(2),\quad\frac18(2),\quad\frac7{40}(2),\quad
  \frac{11}{40}(4),\quad\frac{13}{40}(2),\quad
@@ -135,10 +135,10 @@ The ordinary causal model follows from the construction of Feix, Ara\'{u}jo, and
  A_T&=\frac1{20}\left[I+\sigma_x^{A_O}\sigma_x^{B_I}
  -\sigma_y^{A_O}\sigma_y^{B_I}+\sigma_z^{A_O}\sigma_z^{B_I}\right],\notag\\
  B_T&=\frac14\left[\frac45I+\frac15\sigma_z^{A_I}
- +\frac3{10}\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}\right].
+ +\frac3{10}\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}\right],
  \label{eq:FAB-relation}
 \end{align}
-Here $T_{B_IB_O}$ transposes only Bob's original input and output factors; the subscript $T$ on $A_T,B_T$ labels the components of this transposed process. $A_T$ is a positive $A\prec B$ component with trace $4/5$ and nonzero eigenvalue $1/5$. $B_T$ is a positive $B\prec A$ component with trace $16/5$ and minimum eigenvalue $3/40$. Both satisfy all process linear constraints. Bob's full Choi transpose preserves positive local instruments in the unextended experiment, giving an ordinary causal model for $W_*$.
+where $T_{B_IB_O}$ transposes only Bob's original input and output factors; the subscript $T$ on $A_T,B_T$ labels the components of this transposed process. $A_T$ is a positive $A\prec B$ component with trace $4/5$ and nonzero eigenvalue $1/5$. $B_T$ is a positive $B\prec A$ component with trace $16/5$ and minimum eigenvalue $3/40$. Both satisfy all process linear constraints. Bob's full Choi transpose preserves positive local instruments in the unextended experiment, giving an ordinary causal model for $W_*$.
 
 This argument does not establish EC. Transposing an entire extended Bob instrument also transfers a partial transpose to the shared input state, which need not stay positive; transposing only the original ports need not preserve instrument positivity. Section VI and footnote 6 of Ref.~\cite{Feix} explicitly identify the gap between this construction, their finite searches, and extensible causality. The proof below supplies the missing arbitrary-ancilla statement.
 
@@ -147,30 +147,30 @@ This argument does not establish EC. Transposing an entire extended Bob instrume
 The laboratory responses discussed in the main text follow directly from the Born rule, with no ancillary state required. The axis label $k\in\{x,y,z\}$ selects the Pauli matrix $\sigma_k$, independently of the setting label $x$. Let $\rho_x^k=(I+x\sigma_k)/2$ be its eigenstate of eigenvalue $x=\pm1$. Alice discards her input and prepares $\rho_x^k$; Bob measures $\sigma_k$, records $b=\pm1$, and returns a maximally mixed qubit. In the full-transpose Choi convention the instruments are
 \begin{equation}
  M_x=I_{A_I}\otimes(\rho_x^k)^T,\qquad
- N_b=\frac{I+b\sigma_k}{2}\otimes\frac{I_{B_O}}2.
+ N_b=\frac{I+b\sigma_k}{2}\otimes\frac{I_{B_O}}2,
  \label{eq:forward-instruments}
 \end{equation}
-Here $M_x$ represents Alice's single-outcome preparation channel at setting $x$ and $N_b$ Bob's measurement event with outcome $b$. The resulting distribution is
+where $M_x$ represents Alice's single-outcome preparation channel at setting $x$ and $N_b$ Bob's measurement event with outcome $b$. The resulting distribution is
 \begin{equation}
  p(b|x,k)=\frac{1+\kappa_k x b/5}{2},\qquad
- \kappa_x=\kappa_z=1,\quad\kappa_y=-1.
+ \kappa_x=\kappa_z=1,\quad\kappa_y=-1,
  \label{eq:forward-response}
 \end{equation}
-Here $\kappa_k$ is the axis-dependent sign introduced by transposing the prepared state. The main-text protocol uses $k=x$. The $\sigma_y$ sign is checked separately to detect a Choi convention error.
+where $\kappa_k$ is the axis-dependent sign introduced by transposing the prepared state. The main-text protocol uses $k=x$. The $\sigma_y$ sign is checked separately to detect a Choi convention error.
 
 For the reverse response, Bob measures $\sigma_x^{B_I}$ with result $r=\pm1$ and prepares a $\sigma_z^{B_O}$ eigenstate of eigenvalue $yr$, with setting $y=\pm1$. Alice measures $\sigma_z^{A_I}$ with result $s=\pm1$ and returns a maximally mixed qubit. Thus
 \begin{equation}
  M_s=\frac{I+s\sigma_z}{2}\otimes\frac I2,\qquad
- N_{r|y}=\frac{I+r\sigma_x}{2}\otimes\frac{I+yr\sigma_z}{2}.
+ N_{r|y}=\frac{I+r\sigma_x}{2}\otimes\frac{I+yr\sigma_z}{2},
  \label{eq:reverse-instruments}
 \end{equation}
-Here $M_s$ represents Alice's event with measured result $s$, and $N_{r|y}$ Bob's measurement-and-preparation event with result $r$ and setting $y$; the tensor factors follow the laboratory input--output order. The joint distribution is $p(s,r|y)=[1+s/5+3sy/10]/4$. Summing over $r$ gives
+where $M_s$ represents Alice's event with measured result $s$, and $N_{r|y}$ Bob's measurement and preparation event with result $r$ and setting $y$; the tensor factors follow the laboratory input--output order. The joint distribution is $p(s,r|y)=[1+s/5+3sy/10]/4$. Summing over $r$ gives
 \begin{equation}
  \langle b\rangle_x=\frac{x}{5}\quad(k=x),\qquad
- \langle s\rangle_y=\frac15+\frac{3y}{10}.
+ \langle s\rangle_y=\frac15+\frac{3y}{10},
  \label{eq:directional-response}
 \end{equation}
-Here angle brackets denote the average recorded outcome conditional on the subscripted setting. Every displayed event is CP and each complete instrument is TP. These two separate experiments illustrate the operator's directional dependences; they do not supply its universal EC proof or a circuit realization. The independent verifier \texttt{repro/independent\_operational\_response\_audit.py} forms the standard Choi matrices from the physical maps, applies the full transpose, and checks all probabilities and a deliberately incorrect $\sigma_y$ transpose.
+where angle brackets denote the average recorded outcome conditional on the subscripted setting. Every displayed event is CP and each complete instrument is TP. These two separate experiments illustrate the operator's directional dependences; they do not supply its universal EC proof or a circuit realization. The independent verifier \texttt{repro/independent\_operational\_response\_audit.py} forms the standard Choi matrices from the physical maps, applies the full transpose, and checks all probabilities and a deliberately incorrect $\sigma_y$ transpose.
 
 \section{Why nonseparability excludes every finite purification}
 The pure bipartite process structure theorem~\cite{Yokojima,Cyclic} applies to a pure process whose unitary maps $P A_O B_O$ to $A_I B_I F$. It gives orthogonal decompositions of its past and future spaces into an $A\prec B$ sector and a $B\prec A$ sector. The unitary restricted to each sector is an ordered pure comb. This includes degenerate or zero sectors.
@@ -188,7 +188,7 @@ Conversely, a finite CS process has ordered-comb Stinespring dilations of its tw
  \mathrm{Purifiable}=\CS.
  \label{eq:purifiable-CS}
 \end{equation}
-Here the equality concerns sets of processes within the stated scope. The witness~\eqref{eq:witness-exact-values} excludes $W_*$ from both sets. It remains to prove EC.
+The equality concerns sets of processes within the stated scope. The witness~\eqref{eq:witness-exact-values} excludes $W_*$ from both sets. It remains to prove EC.
 
 The same exclusion rules out a standard deterministic quantum circuit with quantum control of causal order (QC-QC). Every such circuit admits a unitary extension by retaining its internal environments~\cite{QCQC}. Preparing its fixed global input and discarding its future would constitute the purification excluded above. This statement concerns the standard circuit class in which each external operation is used once; postselected simulations and different implementation frameworks are outside its scope.
 
@@ -199,16 +199,16 @@ $W_*$ commutes with $\sigma_z^{A_I}$ and $\sigma_z^{B_O}$. Dephasing these ports
 For a pure shared state choose Schmidt bases and write
 \begin{equation}
  |\psi\rangle=\sum_i\sqrt{\rho_i}|i\rangle_{A'}|i\rangle_{B'},
- \qquad\rho=\sum_i\rho_i|i\rangle\langle i|,\qquad D=\sqrt\rho.
+ \qquad\rho=\sum_i\rho_i|i\rangle\langle i|,\qquad D=\sqrt\rho,
  \label{eq:schmidt}
 \end{equation}
-Here $|\psi\rangle$ is the shared pure state, $\rho_i$ its nonnegative Schmidt probabilities summing to one, $\rho$ the reduced density operator on Bob's paired Schmidt support, and $D$ its positive square root. The indices $i,j$ below label the paired ancillary basis vectors; $o,p\in\{0,1\}$ label Alice's output-qubit basis. Unused coordinates can be padded with zeros. An accepted subset of Alice's reports in input sector $s$ has Choi matrix $M_s$ on $A'A_O$. Its conditional physical CP output on $A_OB'$ has entries
+where $|\psi\rangle$ is the shared pure state, $\rho_i$ its nonnegative Schmidt probabilities summing to one, $\rho$ the reduced density operator on Bob's paired Schmidt support, and $D$ its positive square root. The indices $i,j$ below label the paired ancillary basis vectors; $o,p\in\{0,1\}$ label Alice's output-qubit basis. Unused coordinates can be padded with zeros. An accepted subset of Alice's reports in input sector $s$ has Choi matrix $M_s$ on $A'A_O$. Its conditional physical CP output on $A_OB'$ has entries
 \begin{equation}
  (\omega_s)_{o i,p j}=D_iD_j(M_s^T)_{i o,j p},\qquad
- \tau_s=\Tr_{A_O}\omega_s\preceq\rho,\qquad\omega_s\succeq0.
+ \tau_s=\Tr_{A_O}\omega_s\preceq\rho,\qquad\omega_s\succeq0,
  \label{eq:sigma-choi}
 \end{equation}
-Here $\omega_s$ is the subnormalized joint output and $\tau_s$ its Bob marginal; $D_i=\sqrt{\rho_i}$ is the corresponding diagonal entry of $D$. The transpose in $M_s^T$ is the full transpose from Eq.~\eqref{eq:choi-convention}, followed by reordering to $A_OB'$. In particular,
+where $\omega_s$ is the subnormalized joint output and $\tau_s$ its Bob marginal; $D_i=\sqrt{\rho_i}$ is the corresponding diagonal entry of $D$. The transpose in $M_s^T$ is the full transpose from Eq.~\eqref{eq:choi-convention}, followed by reordering to $A_OB'$. In particular,
 \begin{equation}
  \tau_s=D(\Tr_{A_O}M_s)^T D\preceq D^2=\rho.
  \label{eq:tau-bound}
@@ -217,19 +217,19 @@ $\omega_s$ itself is the untransposed physical CP output and can be mixed, with 
 
 Bob's accepted subset in output sector $j$ gives an effect $E_j$ on $B_IB'$. Channel normalization implies
 \begin{equation}
- E_+,E_-\succeq0,\qquad E=E_++E_-\preceq I_{B_IB'}.
+ E_+,E_-\succeq0,\qquad E=E_++E_-\preceq I_{B_IB'},
  \label{eq:bob-effects}
 \end{equation}
-Here $E$ is the total effect of the accepted Bob subset, and $E_+,E_-$ its two output-flag components. For all refined reports together their effects sum to $I_{B_IB'}$.
+where $E$ is the total effect of the accepted Bob subset, and $E_+,E_-$ its two output-flag components. For all refined reports together their effects sum to $I_{B_IB'}$.
 
 \subsection{The effective Bob operator}
 Under the identification of the $A_O$ and $B_I$ qubit bases, put $\omega_{s,k}=\Tr_{A_O}[(\sigma_k\otimes I)\omega_s]$ for $k=x,y,z$, where $\omega_{s,k}$ is the Pauli contraction of the joint output $\omega_s$. The process contraction contains $\sigma_k^T$, as follows directly from Eq.~\eqref{eq:sigma-choi}:
 \begin{align}
  K_{s,j}={}&\frac{1+s\delta}{4}I\otimes\tau_s
      +\frac\beta4\sum_{k=x,y,z}\sigma_k^T\otimes\omega_{s,k}
-     +\frac{s j\alpha}{4}\sigma_x\otimes\tau_s.\label{eq:kernel-pauli}
+     +\frac{s j\alpha}{4}\sigma_x\otimes\tau_s,\label{eq:kernel-pauli}
 \end{align}
-Here $K_{s,j}$ is the effective operator on Bob's input for Alice sector $s$ and Bob flag $j$. The Pauli sum equals $2\omega_s^{T_{A_O}}-I\otimes\tau_s$, where $T_{A_O}$ denotes partial transpose on Alice's output factor only. For a qubit,
+where $K_{s,j}$ is the effective operator on Bob's input for Alice sector $s$ and Bob flag $j$. The Pauli sum equals $2\omega_s^{T_{A_O}}-I\otimes\tau_s$, where $T_{A_O}$ denotes partial transpose on Alice's output factor only. For a qubit,
 \begin{equation}
  \omega_s^{T_{A_O}}=I\otimes\tau_s
                  -(\sigma_y\otimes I)\omega_s(\sigma_y\otimes I).
@@ -240,10 +240,10 @@ Combining these identities gives
  K_{s,j}={}&a_s I\otimes\tau_s
        -\frac\beta2(\sigma_y\otimes I)\omega_s(\sigma_y\otimes I)
        +\frac{s j\alpha}{4}\sigma_x\otimes\tau_s,\notag\\
- a_+={}&\frac7{20},\qquad a_- =\frac14.
+ a_+={}&\frac7{20},\qquad a_- =\frac14,
  \label{eq:kernel}
 \end{align}
-Here $a_s$ is the flag-dependent scalar coefficient of $I\otimes\tau_s$. The probability of the selected pair of subsets is $\sum_{s,j}\Tr(E_jK_{s,j})$. This derivation fixes the $\sigma_y$ sign and the Choi conjugations for complex instruments. An extra transpose of $\omega_s$, of the shared state, or of a Bob block changes the contraction.
+where $a_s$ is the flag-dependent scalar coefficient of $I\otimes\tau_s$. The probability of the selected pair of subsets is $\sum_{s,j}\Tr(E_jK_{s,j})$. This derivation fixes the $\sigma_y$ sign and the Choi conjugations for complex instruments. An extra transpose of $\omega_s$, of the shared state, or of a Bob block changes the contraction.
 
 \section{The transportation criterion for all event subsets}
 Choose the same constants for every experiment:
@@ -251,16 +251,16 @@ Choose the same constants for every experiment:
  q=\frac{49}{80},\quad\theta=\frac3{25},\quad
  w_s=\frac{q+s\theta}{2},\quad
  w_+=\frac{293}{800},\quad w_-=\frac{197}{800},\quad
- c=\frac{1-q}{2}=\frac{31}{160}.
+ c=\frac{1-q}{2}=\frac{31}{160},
  \label{eq:margins}
 \end{equation}
-Here $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
+where $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
 \begin{equation}
  g_a(x)=w_s\Tr\tau_{a,s|x},\qquad
- h_b(y)=c\Tr[(I_{B_I}\otimes\rho)E_{b|y}].
+ h_b(y)=c\Tr[(I_{B_I}\otimes\rho)E_{b|y}],
  \label{eq:prescribed-margins}
 \end{equation}
-Here $g_a(x),h_b(y)$ are the prescribed subnormalized first-party marginals in the two ordered branches and $E_{b|y}$ is Bob's refined event effect. These marginals are nonnegative and depend only on their own party's setting. Their total masses are $\sum_a g_a=q$ and $\sum_b h_b=2c=1-q$.
+where $g_a(x),h_b(y)$ are the prescribed subnormalized first-party marginals in the two ordered branches and $E_{b|y}$ is Bob's refined event effect. These marginals are nonnegative and depend only on their own party's setting. Their total masses are $\sum_a g_a=q$ and $\sum_b h_b=2c=1-q$.
 
 \begin{lemma}[Capacitated transportation]
 For a normalized nonnegative table $p_{ab}$ and nonnegative $g_a,h_b$ of masses $q,1-q$, respectively, there are nonnegative tables $u,v$ such that $p=u+v$, $\sum_bu_{ab}=g_a$, and $\sum_av_{ab}=h_b$ if and only if
@@ -270,16 +270,16 @@ For a normalized nonnegative table $p_{ab}$ and nonnegative $g_a,h_b$ of masses 
  \label{eq:hall}
 \end{equation}
 \end{lemma}
-Here $p_{ab}$ is the joint table at a fixed setting pair. $p(\mathcal A,\mathcal B)$ sums its entries over $a\in\mathcal A,b\in\mathcal B$, while $g(\mathcal A),h(\mathcal B)$ sum the prescribed marginals over their respective subsets. The tables $u,v$ are the subnormalized ordered contributions.
+In this criterion, $p_{ab}$ is the joint table at a fixed setting pair. $p(\mathcal A,\mathcal B)$ sums its entries over $a\in\mathcal A,b\in\mathcal B$, while $g(\mathcal A),h(\mathcal B)$ sum the prescribed marginals over their respective subsets. The tables $u,v$ are the subnormalized ordered contributions.
 \begin{proof}
 Necessity follows from $u(\mathcal A,\mathcal B)\le g(\mathcal A)$ and $v(\mathcal A,\mathcal B)\le h(\mathcal B)$. For sufficiency, including full and complementary subsets in Eq.~\eqref{eq:hall} gives $p_A(a)\ge g_a$ and $p_B(b)\ge h_b$, where $p_A,p_B$ are the row and column marginals of $p$. Let $k_b=p_B(b)-h_b\ge0$ be the residual column demand, of total mass $q$. A network with source--row capacities $g_a$, row--column capacities $p_{ab}$, and column--sink capacities $k_b$ has a flow of mass $q$ exactly when each cut has capacity at least $q$. If its source-side rows and columns are $\mathcal S,\mathcal T$, that condition is
 \begin{align}
  &g(\mathcal S^c)+p(\mathcal S,\mathcal T^c)+k(\mathcal T)-q\notag\\
  &\hspace{15mm}=g(\mathcal S^c)+h(\mathcal T^c)
-                   -p(\mathcal S^c,\mathcal T^c)\ge0.
+                   -p(\mathcal S^c,\mathcal T^c)\ge0,
  \label{eq:flow-cuts}
 \end{align}
-Here the superscript $c$ denotes the complement within the corresponding outcome set and $k(\mathcal T)$ sums the residual demands over $\mathcal T$. These are precisely the assumed inequalities. The flow entries define $0\le u_{ab}\le p_{ab}$, with row sums $g_a$ and column sums $k_b$; setting $v=p-u$ proves the claim.
+where the superscript $c$ denotes the complement within the corresponding outcome set and $k(\mathcal T)$ sums the residual demands over $\mathcal T$. These are precisely the assumed inequalities. The flow entries define $0\le u_{ab}\le p_{ab}$, with row sums $g_a$ and column sums $k_b$; setting $v=p-u$ proves the claim.
 \end{proof}
 
 Apply the lemma independently to every setting pair $(x,y)$. The same prescribed $g_a(x)$ and $h_b(y)$ are used throughout. Then $u/q$ is normalized and has Alice marginal $g_a(x)/q$, independent of $y$. Likewise $v/(1-q)$ has Bob marginal $h_b(y)/(1-q)$, independent of $x$. The setting-independent mixture weight is the fixed $q$. Thus proving every inequality~\eqref{eq:hall} proves causality of the whole experiment, regardless of the numbers of settings or outcomes.
@@ -287,10 +287,10 @@ Apply the lemma independently to every setting pair $(x,y)$. The same prescribed
 Using the Born reduction, the left side minus the right side of an arbitrary such inequality is
 \begin{equation}
  H=\sum_{s,j}\Tr(E_jK_{s,j})
-       -\sum_s w_s\Tr\tau_s-c\Tr[(I\otimes\rho)E].
+       -\sum_s w_s\Tr\tau_s-c\Tr[(I\otimes\rho)E],
  \label{eq:Hall-score}
 \end{equation}
-Here $H$ is the scalar Hall excess for the selected event subsets. Sections~\ref{sec:lifting}--\ref{sec:universal} prove $H\le0$ for all allowed events and states, including empty, full, and complementary subsets.
+where $H$ is the scalar Hall excess for the selected event subsets. Sections~\ref{sec:lifting}--\ref{sec:universal} prove $H\le0$ for all allowed events and states, including empty, full, and complementary subsets.
 
 \section{Lifting general CP events and Bob effects}
 \label{sec:lifting}
@@ -298,10 +298,10 @@ Here $H$ is the scalar Hall excess for the selected event subsets. Sections~\ref
 Write Alice's CP event in sector $s$ with Kraus matrices $K_{s,\mu}:\mathcal H_A\to\mathbb C^2$, where $\mathcal H_A$ is her finite ancillary input space, $\mathbb C^2$ her qubit output space, and $\mu$ the Kraus-branch label. They satisfy $\sum_\mu K_{s,\mu}^\dagger K_{s,\mu}\preceq I_A$, with $I_A$ the identity on $\mathcal H_A$. Retain their environment and set
 \begin{equation}
  L_{s,o}=\sum_\mu|\mu\rangle\langle o|K_{s,\mu},\qquad
- R_s=I_A-\sum_{o=0}^1L_{s,o}^\dagger L_{s,o}\succeq0.
+ R_s=I_A-\sum_{o=0}^1L_{s,o}^\dagger L_{s,o}\succeq0,
  \label{eq:Alice-contraction}
 \end{equation}
-Here $|\mu\rangle$ is an orthonormal basis of the retained environment $\mathcal H_E$, $\langle o|$ selects output basis state $o$, and $R_s$ is the positive slack left by the accepted event. The rectangular amplitudes $L_{s,o}:\mathcal H_A\to\mathcal H_E$ reproduce $\omega_s$ after the environment is traced. Zero Kraus matrices pad the two environments to a common finite space. To interpret a square-matrix polynomial literally, embed $\mathcal H_A$ and $\mathcal H_E$ in a common larger Alice space and pad each $L_{s,o}$ with zero rows and columns. The shared state is embedded in the original input subspace. This preserves all $L_{s,o}^\dagger L_{s,p}$ matrix elements and leaves $I-\sum_oL_{s,o}^\dagger L_{s,o}\succeq0$ on the whole enlarged space. Therefore arbitrary CP events, including mixed outputs and multiple Kraus branches, are covered by the contraction constraints.
+where $|\mu\rangle$ is an orthonormal basis of the retained environment $\mathcal H_E$, $\langle o|$ selects output basis state $o$, and $R_s$ is the positive slack left by the accepted event. The rectangular amplitudes $L_{s,o}:\mathcal H_A\to\mathcal H_E$ reproduce $\omega_s$ after the environment is traced. Zero Kraus matrices pad the two environments to a common finite space. To interpret a square-matrix polynomial literally, embed $\mathcal H_A$ and $\mathcal H_E$ in a common larger Alice space and pad each $L_{s,o}$ with zero rows and columns. The shared state is embedded in the original input subspace. This preserves all $L_{s,o}^\dagger L_{s,p}$ matrix elements and leaves $I-\sum_oL_{s,o}^\dagger L_{s,o}\succeq0$ on the whole enlarged space. Therefore arbitrary CP events, including mixed outputs and multiple Kraus branches, are covered by the contraction constraints.
 
 \subsection{A dilation preserving the input-qubit operators}
 Set $E_0=I-E_+-E_-$ for the rejected effect. This three-outcome positive operator-valued measure (POVM) has a finite Naimark dilation. It can be chosen with the fixed input embedding
@@ -319,10 +319,10 @@ For the dilated operators define the unnormalized qubit partial traces and block
 \begin{equation}
  T=\Tr_{B_I}(P_++P_-),\qquad
  V=\Tr_{B_I}[\sigma_x(P_+-P_-)],\qquad
- F=\sigma_y(P_++P_-)\sigma_y.
+ F=\sigma_y(P_++P_-)\sigma_y,
  \label{eq:TVF}
 \end{equation}
-Here $T$ is the total accepted effect traced over the input qubit, $V$ its $\sigma_x$-weighted outcome difference, and $F$ the $\sigma_y$-conjugated accepted effect on the qubit and enlarged ancilla. In this subsection $F$ is an operator, distinct from the global future space in Section S4. The Pauli matrices in Eq.~\eqref{eq:TVF} act on $B_I$, with identities on Bob's enlarged ancilla. The $(o,p)$ qubit block is denoted by $F_{op}$. All Alice operators commute with all Bob operators. Define the Hall operator by
+where $T$ is the total accepted effect traced over the input qubit, $V$ its $\sigma_x$-weighted outcome difference, and $F$ the $\sigma_y$-conjugated accepted effect on the qubit and enlarged ancilla. In this subsection $F$ is an operator, distinct from the global future space in Section S4. The Pauli matrices in Eq.~\eqref{eq:TVF} act on $B_I$, with identities on Bob's enlarged ancilla. The $(o,p)$ qubit block is denoted by $F_{op}$. All Alice operators commute with all Bob operators. Define the Hall operator by
 \begin{align}
  \mathcal H={}&\sum_{s,o}L_{s,o}^\dagger L_{s,o}
           (a_sT+s\alpha V/4-w_sI)\notag\\
@@ -335,10 +335,10 @@ where $\mathcal H$ acts on the two enlarged auxiliary spaces and its shared-stat
 \label{sec:sos}
 All the following matrices have operator-valued entries on the two auxiliary spaces, and their sizes are independent of those spaces' dimensions. For a real symmetric scalar matrix $N$ and a compatible operator matrix $Q$, define
 \begin{equation}
- \langle N,Q\rangle=\sum_{i,j}N_{ij}Q_{ij}.
+ \langle N,Q\rangle=\sum_{i,j}N_{ij}Q_{ij},
  \label{eq:weighted-contraction}
 \end{equation}
-Here the indices $i,j$ run over the common matrix size; the angle brackets here denote a weighted matrix contraction, rather than the outcome average of Section S3.2. For $N,Q\succeq0$ this contraction is positive. It is the scalar-index partial trace of $N^{1/2}QN^{1/2}$.
+where the indices $i,j$ run over the common matrix size; the angle brackets denote a weighted matrix contraction, rather than the outcome average of Section S3.2. For $N,Q\succeq0$ this contraction is positive. It is the scalar-index partial trace of $N^{1/2}QN^{1/2}$.
 
 \subsection{Positive matrices and their bases}
 Write $C=P_0=I-P_+-P_-$ for the rejected projector, with qubit row and column indices $r,c\in\{0,1\}$ and blocks $C_{rc}$. Use row-major ordering throughout and define the operator tuples
@@ -353,16 +353,16 @@ Write $C=P_0=I-P_+-P_-$ for the rejected projector, with qubit row and column in
 Products of an amplitude with a tuple act on each entry, and parentheses concatenate the resulting tuples. For an operator tuple $z=(z_i)$ define the Gram and slack-localized Gram matrices by
 \begin{equation}
  G(z)_{ij}=z_i^\dagger z_j,\qquad
- \mathcal L_{R_s}(z)_{ij}=z_i^\dagger R_s z_j.
+ \mathcal L_{R_s}(z)_{ij}=z_i^\dagger R_s z_j,
  \label{eq:SOS-gram}
 \end{equation}
-Here $G(z)$ is the Gram matrix and $\mathcal L_{R_s}(z)$ inserts the positive Alice slack between tuple entries. Both are positive. The remaining two types are
+where $G(z)$ is the Gram matrix and $\mathcal L_{R_s}(z)$ inserts the positive Alice slack between tuple entries. Both are positive. The remaining two types are
 \begin{equation}
  (\mathcal M_s)_{(o,r),(p,c)}=L_{s,o}^\dagger C_{rc}L_{s,p},\qquad
- (D_{s,j})_{rc}=R_s(P_j)_{rc}.
+ (D_{s,j})_{rc}=R_s(P_j)_{rc},
  \label{eq:SOS-localizers}
 \end{equation}
-Here $\mathcal M_s$ is the accepted-amplitude localizer of the rejected projector and $D_{s,j}$ the slack--projector product matrix. Positivity of $\mathcal M_s$ follows by applying $C\succeq0$ to $\sum_oL_{s,o}z_{o,r}$ for arbitrary test vectors $z_{o,r}$. Positivity of $D_{s,j}$ follows because $R_s$ and $P_j$ act on different laboratories. Compress $\mathcal M_s$ to
+where $\mathcal M_s$ is the accepted-amplitude localizer of the rejected projector and $D_{s,j}$ the slack--projector product matrix. Positivity of $\mathcal M_s$ follows by applying $C\succeq0$ to $\sum_oL_{s,o}z_{o,r}$ for arbitrary test vectors $z_{o,r}$. Positivity of $D_{s,j}$ follows because $R_s$ and $P_j$ act on different laboratories. Compress $\mathcal M_s$ to
 \begin{equation}
  \widetilde{\mathcal M}_s=B^T\mathcal M_sB,\qquad
  B=\begin{pmatrix}1&0&0\\0&1&0\\0&1&0\\0&0&1\end{pmatrix},
@@ -373,10 +373,10 @@ where $B$ is the displayed real $4\times3$ compression matrix, $\widetilde{\math
 The eight-entry bases split under a reflection. For $v_s$ choose representative and partner indices $(0,1,2,3)$ and $(7,6,5,4)$; for $e$ choose $(0,1,4,5)$ and $(3,2,7,6)$. Indices start at zero. Define four-entry tuples
 \begin{equation}
  u_s^{\mathrm e/\mathrm o}=(v_s)_{\mathrm{rep}}\mathbin{\pm}(v_s)_{\mathrm{partner}},\qquad
- z^{\mathrm e/\mathrm o}=e_{\mathrm{rep}}\mathbin{\pm}e_{\mathrm{partner}}.
+ z^{\mathrm e/\mathrm o}=e_{\mathrm{rep}}\mathbin{\pm}e_{\mathrm{partner}},
  \label{eq:SOS-parity}
 \end{equation}
-Here ``rep'' and ``partner'' extract entries in the ordered index lists just specified; superscripts $\mathrm e,\mathrm o$ denote even and odd reflection parity. The even tuple uses $+$ and the odd tuple uses $-$. There is no square-root normalization factor.
+where ``rep'' and ``partner'' extract entries in the ordered index lists just specified; superscripts $\mathrm e,\mathrm o$ denote even and odd reflection parity. The even tuple uses $+$ and the odd tuple uses $-$. There is no square-root normalization factor.
 
 \subsection{The fifteen scalar contractions}
 Let $\kappa=4\,000\,000$ be the common weight denominator and $k_+=1,k_-=8$ the starting matrix indices for the two flag sectors. The fifteen integer coefficient matrices $N_0,\ldots,N_{14}$ listed below define the unscaled positive certificate operator $\mathcal Q$ by
@@ -410,10 +410,10 @@ There are sixteen such block polynomials $\mathfrak r^{j\ell}_{rc}$, all zero fo
  \mathcal I&=\sum_{j,\ell,r,c}B^{j\ell}_{rc}\,\mathfrak r^{j\ell}_{rc},\notag\\
  B^{j\ell}_{rc}&=b^{j\ell}_{rc}I+
  \sum_{s,o,p}(C_s^{j\ell})_{(o,r),(p,c)}
-                 L_{s,o}^\dagger L_{s,p}.
+                 L_{s,o}^\dagger L_{s,p},
  \label{eq:ideal-coefficients}
 \end{align}
-Here $b^{j\ell}_{rc}$ are scalar coefficients and $C_s^{j\ell}$ their $4\times4$ coefficient matrices for Alice's quadratic amplitudes; all entries are integers. Write $b^{j\ell}$ for the $2\times2$ matrix with entries $b^{j\ell}_{rc}$, and introduce its integer scalar coefficients $a_0,b_0,c_0$:
+where $b^{j\ell}_{rc}$ are scalar coefficients and $C_s^{j\ell}$ their $4\times4$ coefficient matrices for Alice's quadratic amplitudes; all entries are integers. Write $b^{j\ell}$ for the $2\times2$ matrix with entries $b^{j\ell}_{rc}$, and introduce its integer scalar coefficients $a_0,b_0,c_0$:
 \begin{equation}
  b^{++}=a_0I+b_0\sigma_x,\qquad b^{--}=a_0I-b_0\sigma_x,\qquad
  b^{+-}=b^{-+}=c_0I.
@@ -438,7 +438,7 @@ With the rational parameters~\eqref{eq:margins}, direct expansion gives the poly
  \boxed{-\kappa\mathcal H=\mathcal Q+\mathcal I.}
  \label{eq:SOS-identity}
 \end{equation}
-Here $\mathcal I$ vanishes under the physical projector relations, while $\mathcal Q$ is positive. The identity holds in free Alice and Bob words with interparty commutation and the usual adjoint rule; within each party the multiplication order is retained. Every $N_k$ is real symmetric and strictly positive definite. Table~\ref{tab:hall-sos-leading-minors} gives their exact leading principal determinants $\Delta_r(N_k)$, with $r$ the principal-block size. In an LDL factorization, $L$ is unit lower triangular and $D$ diagonal; the positive pivots $d_r$ are successive determinant ratios. Consequently $\mathcal Q\succeq0$ and $\mathcal H\preceq0$.
+The term $\mathcal I$ vanishes under the physical projector relations, while $\mathcal Q$ is positive. The identity holds in free Alice and Bob words with interparty commutation and the usual adjoint rule; within each party the multiplication order is retained. Every $N_k$ is real symmetric and strictly positive definite. Table~\ref{tab:hall-sos-leading-minors} gives their exact leading principal determinants $\Delta_r(N_k)$, with $r$ the principal-block size. In an LDL factorization, $L$ is unit lower triangular and $D$ diagonal; the positive pivots $d_r$ are successive determinant ratios. Consequently $\mathcal Q\succeq0$ and $\mathcal H\preceq0$.
 \input{hall_sos_positive_minors.tex}
 
 The eleven-block certificate before reflection splitting is also supplied. Its integer coefficient system has size $656\times318$, rank $271$, and $47$ free coordinates. Rational recovery satisfies all coefficient equations exactly, and exact LDL factorizations certify all eleven weights. Averaging under joint $A_O/B_I$ Pauli $\sigma_x$, then under joint Pauli $\sigma_z$ with Bob's $+/-$ reports interchanged, preserves the Hall polynomial and positivity. Splitting the four eight-dimensional blocks yields precisely the fifteen matrices printed here. This transformation is algebraic and uses no further numerical optimization.
@@ -451,27 +451,27 @@ The transportation lemma gives a useful sufficient criterion beyond the particul
 
 The arbitrary-dimensional inequality applies to the two Alice event subsets associated with any $\mathcal A$, and the two Bob event effects associated with any $\mathcal B$. Thus it proves every cut in Eq.~\eqref{eq:hall}. The transportation lemma proves a causal decomposition for every pure shared state and every finite instrument collection. For a mixed shared state, decompose it into pure states and combine their causal models; the weight $q$ in Eq.~\eqref{eq:margins} is common to all components. Equivalently, purify the state into an enlarged local input ancilla. Refinement and coarse graining then prove
 \begin{equation}
- W_*\in\EC\setminus\CS,\qquad W_*\notin\mathrm{Purifiable}.
+ W_*\in\EC\setminus\CS,\qquad W_*\notin\mathrm{Purifiable},
  \label{eq:final-theorem}
 \end{equation}
-Here $\EC\setminus\CS$ means the set of EC processes excluding CS processes, $\in$ denotes membership, and $\notin$ nonmembership.
+where $\EC\setminus\CS$ means the set of EC processes excluding CS processes, $\in$ denotes membership, and $\notin$ nonmembership.
 
 A second exact certificate is retained for the original, larger canonical conic relaxation. Its exact dual equations and zero objective provide an independent route to the same Hall bound. For completeness, the additional physical representation used by that relaxation can be attained without restricting CP events. Complete each accepted event by rejected Kraus matrices, pad the accepted slots for both sectors to the same number $a$, and pad the total environment to dimension $m$. Let $Q_E$ project onto these $a$ accepted slots. The complete Stinespring isometry $\mathcal V_s:\mathcal H_A\to\mathbb C^2\otimes\mathbb C^m$ extends to a unitary $\mathcal U_s$ on a space of dimension $2m$, with a common input embedding $J_A$ and $\mathcal U_sJ_A=\mathcal V_s$. For any common isometry $F_E:\mathbb C^m\to\mathbb C^{2m}$ set
 \begin{equation}
  D_{s,o}=F_EQ_E(\langle o|\otimes I_m)\mathcal U_s,\qquad
- Q=F_EQ_EF_E^\dagger.
+ Q=F_EQ_EF_E^\dagger,
  \label{eq:common-range-dilation}
 \end{equation}
-Here $D_{s,o}$ are dilated accepted-event amplitudes, $Q$ their common output-range projector, and $I_m$ the identity on the $m$-dimensional environment. These matrices are distinct from the Schmidt square root $D$ and the slack products $D_{s,j}$ above. Then $D_{s,o}D_{s,p}^\dagger=\delta_{op}Q$ and
+where $D_{s,o}$ are dilated accepted-event amplitudes, $Q$ their common output-range projector, and $I_m$ the identity on the $m$-dimensional environment. These matrices are distinct from the Schmidt square root $D$ and the slack products $D_{s,j}$ above. Then $D_{s,o}D_{s,p}^\dagger=\delta_{op}Q$ and
 $\sum_oD_{s,o}^\dagger D_{s,o}=\mathcal U_s^\dagger(I_2\otimes Q_E)\mathcal U_s$ is a projector. Tracing the retained output environment recovers every original accepted CP output, including its mixedness. The Bob marginal and all Born pairings are preserved.
 
 One further doubling gives
 \begin{equation}
  A_{s,o}=\begin{pmatrix}0&0\\D_{s,o}&0\end{pmatrix},\qquad
- J_2=\begin{pmatrix}J_A\\0\end{pmatrix}.
+ J_2=\begin{pmatrix}J_A\\0\end{pmatrix},
  \label{eq:nilpotent-dilation}
 \end{equation}
-Here $A_{s,o}$ are the amplitudes embedded in the doubled space and $J_2$ its input embedding. This preserves the common output range and enforces
+where $A_{s,o}$ are the amplitudes embedded in the doubled space and $J_2$ its input embedding. This preserves the common output range and enforces
 $A_{s,o}A_{t,p}=0$ and $A_{s,o}^\dagger J_2=0$ for all sector labels $s,t$ and output-basis indices $o,p$. This gives the state-supported 45-word Gram basis of the canonical relaxation. These relations apply to this representation, not to arbitrary original event matrices. The small certificate of Section~\ref{sec:sos} does not need this construction.
 
 The independent rational verifier checks $10\,960$ canonical dual equations, exact upper bound zero, and positivity of its supported cone blocks. It separately reconstructs the small SOS from the original Pauli contraction, finding $48$ nonzero target words and zero residual words. The complete finite-dimensional proof above supplies physical coverage and all transportation cuts. Numerical examples are convention and implementation checks rather than a substitute for this proof.
@@ -479,10 +479,10 @@ The independent rational verifier checks $10\,960$ canonical dual equations, exa
 \section{Exact classification on the white-noise line}
 Let
 \begin{equation}
- W_\eta=(1-\eta)W_*+\eta I/4,\qquad 0\le\eta\le1.
+ W_\eta=(1-\eta)W_*+\eta I/4,\qquad 0\le\eta\le1,
  \label{eq:noise}
 \end{equation}
-Here $\eta$ is the probability of replacing the counterexample by the uniform process $I/4$, and the subscript labels the resulting noisy process. EC is convex, and $I/4$ is CS and hence EC. Therefore $W_\eta$ is EC everywhere on this line. The witness value is
+where $\eta$ is the probability of replacing the counterexample by the uniform process $I/4$, and the subscript labels the resulting noisy process. EC is convex, and $I/4$ is CS and hence EC. Therefore $W_\eta$ is EC everywhere on this line. The witness value is
 \begin{equation}
  \Tr(SW_\eta)=\frac{11\eta-1}{10}.
  \label{eq:noise-witness}
@@ -505,7 +505,7 @@ Their sum is $W_\eta$, and each obeys its ordered-process linear constraints. Th
  W_\eta\in\CS\Longleftrightarrow\eta\ge\frac1{11}.
  \label{eq:noise-classification}
 \end{equation}
-Here the double arrows mean ``if and only if.'' The boundary $\eta=1/11$ is included in CS and purifiability. The line admits the following stability extension in the full valid-process space.
+The double arrows mean ``if and only if.'' The boundary $\eta=1/11$ is included in CS and purifiability. The line admits the following stability extension in the full valid-process space.
 
 \section{A neighborhood stable in every valid perturbation direction}
 \label{sec:robustness}
@@ -523,25 +523,25 @@ For every $D\in\mathcal V_0$,
 Put $R_A={}_{A_O}$ and $R_B={}_{B_O}$. These commuting output-replacement maps preserve the process linear subspace. They are positive and unital, so they contract the operator norm on Hermitian inputs: apply each map to $-\|D\|_\infty I\preceq D\preceq\|D\|_\infty I$. Equation~\eqref{eq:process-subspace} gives $D=R_AD+R_BD-R_AR_BD$. Define
 \begin{align}
  A(D)&=\frac I8+R_BD-\frac12R_AR_BD,\notag\\
- B(D)&=\frac I8+R_AD-\frac12R_AR_BD.
+ B(D)&=\frac I8+R_AD-\frac12R_AR_BD,
  \label{eq:CS-ball-split}
 \end{align}
-Here $A(D),B(D)$ are candidate subnormalized components of orders $A\prec B,B\prec A$, respectively; juxtaposition of a map and an operator means map application. Their sum is $I/4+D$. Each remains in the process linear subspace, has trace two, and obeys $R_BA(D)=A(D)$ or $R_AB(D)=B(D)$, respectively. Norm contraction and the triangle inequality imply
+where $A(D),B(D)$ are candidate subnormalized components of orders $A\prec B,B\prec A$, respectively; juxtaposition of a map and an operator means map application. Their sum is $I/4+D$. Each remains in the process linear subspace, has trace two, and obeys $R_BA(D)=A(D)$ or $R_AB(D)=B(D)$, respectively. Norm contraction and the triangle inequality imply
 \begin{equation}
  \lambda_{\min}(A(D)),\lambda_{\min}(B(D))
- \ge\frac18-\frac32\|D\|_\infty\ge0.
+ \ge\frac18-\frac32\|D\|_\infty\ge0,
  \label{eq:CS-ball-positivity}
 \end{equation}
-Here $\lambda_{\min}$ denotes the smallest eigenvalue. Thus these are positive ordered components, proving the lemma.
+where $\lambda_{\min}$ denotes the smallest eigenvalue. Thus these are positive ordered components, proving the lemma.
 \end{proof}
 
 \begin{theorem}[A full-dimensional EC, nonpurifiable neighborhood]
 Let $W_0=I/4$ and
 \begin{equation}
- \overline W=\frac{21}{22}W_*+\frac1{22}W_0.
+ \overline W=\frac{21}{22}W_*+\frac1{22}W_0,
  \label{eq:robust-center}
 \end{equation}
-Here $W_0$ is the uniform process and $\overline W$ the center at noise fraction $1/22$. For every perturbation $\Delta\in\mathcal V_0$,
+where $W_0$ is the uniform process and $\overline W$ the center at noise fraction $1/22$. For every perturbation $\Delta\in\mathcal V_0$,
 \begin{equation}
  \|\Delta\|_\infty\le\frac1{264}
  \quad\Longrightarrow\quad
@@ -583,10 +583,10 @@ For a parameter-space view, set
 \begin{equation}
  W(\delta,\alpha,\beta)=\frac14\left[I+\delta\sigma_z^{A_I}
  +\alpha\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}
- +\beta\sum_{k=x,y,z}\sigma_k^{A_O}\sigma_k^{B_I}\right].
+ +\beta\sum_{k=x,y,z}\sigma_k^{A_O}\sigma_k^{B_I}\right],
  \label{eq:parameter-family}
 \end{equation}
-Here $\delta,\alpha,\beta$ are varied real coefficients of the same Pauli terms.
+where $\delta,\alpha,\beta$ are varied real coefficients of the same Pauli terms.
 
 The center parameters are $(21/110,63/220,21/110)$. Write $d\delta,d\alpha,d\beta$ for finite offsets from this center, rather than infinitesimal differentials. Since the Pauli sum has norm three, the neighborhood includes all such offsets satisfying
 \begin{equation}
@@ -629,7 +629,7 @@ Regeneration uses the supplied project environment with SymPy, NumPy, SciPy, and
 
 Independent finite complex mixed-state controls compare the original Born table with Eq.~\eqref{eq:kernel}, perform flag refinement, enumerate all subset cuts, and solve the transportation problem. They include several Kraus branches per report and unequal ancillary dimensions. A deliberately inserted extra transpose fails these controls. The checked examples have Born-reduction residuals below $5\times10^{-17}$ and transportation residuals below $2\times10^{-15}$. Source-hashed computing-node replication runs the same exact certificates; its role is reproducibility, while Eqs.~\eqref{eq:SOS-identity} and \eqref{eq:flow-cuts} establish the universal claim.
 
-The minimal distribution has a single entry point, \texttt{verify.py}, requiring only Python and SymPy. It checks both exact small SOS certificates, physicality and the witness, the ordered split on every valid Pauli basis direction, and the neighborhood constants. It does not invoke the optimizer or regenerate a certificate. The accompanying proof remains necessary for physical coverage, norm contraction, and the externally cited pure-process theorem. A separate review packet lists these obligations for professional mathematical review; such review is not represented as completed by machine verification.
+The portable distribution provides a single entry point, \texttt{verify.py}, and requires only Python and SymPy. It checks the two exact SOS certificates, process validity, the witness, the ordered decomposition along every valid Pauli basis direction, and the neighborhood constants. All checks use the supplied rational data and require neither optimization nor certificate regeneration. The reductions and proofs in Sections~\ref{sec:proof-map}--\ref{sec:robustness} establish coverage of arbitrary finite laboratory experiments; the pure-process structure theorem~\cite{Yokojima,Cyclic} supplies the link between causal nonseparability and the exclusion of finite pure dilations.
 
 \begin{thebibliography}{99}
 \bibitem{Stinespring} W. F. Stinespring, Positive functions on $C^*$-algebras, \href{https://doi.org/10.1090/S0002-9939-1955-0069403-4}{Proc. Am. Math. Soc. \textbf{6}, 211 (1955)}.
@@ -637,6 +637,7 @@ The minimal distribution has a single entry point, \texttt{verify.py}, requiring
 \bibitem{QuantumCausality} C. Brukner, Quantum causality, \href{https://doi.org/10.1038/nphys2930}{Nat. Phys. \textbf{10}, 259 (2014)}.
 \bibitem{Discriminate} G. Chiribella, Perfect discrimination of no-signalling channels via quantum superposition of causal structures, \href{https://doi.org/10.1103/PhysRevA.86.040301}{Phys. Rev. A \textbf{86}, 040301(R) (2012)}.
 \bibitem{GateOrder} M. Ara\'{u}jo, F. Costa, and C. Brukner, Computational Advantage from Quantum-Controlled Ordering of Gates, \href{https://doi.org/10.1103/PhysRevLett.113.250402}{Phys. Rev. Lett. \textbf{113}, 250402 (2014)}.
+\bibitem{GongMachineLearning} N. Ma, P. Z. Zhao, and J. Gong, Quantum machine learning with indefinite causal order, \href{https://doi.org/10.1103/PhysRevA.110.052406}{Phys. Rev. A \textbf{110}, 052406 (2024)}.
 \bibitem{Communication} P. A. Gu\'{e}rin, A. Feix, M. Ara\'{u}jo, and C. Brukner, Exponential Communication Complexity Advantage from Quantum Superposition of the Direction of Communication, \href{https://doi.org/10.1103/PhysRevLett.117.100502}{Phys. Rev. Lett. \textbf{117}, 100502 (2016)}.
 \bibitem{NoisyCommunication} D. Ebler, S. Salek, and G. Chiribella, Enhanced Communication with the Assistance of Indefinite Causal Order, \href{https://doi.org/10.1103/PhysRevLett.120.120502}{Phys. Rev. Lett. \textbf{120}, 120502 (2018)}.
 \bibitem{PerfectCommunication} G. Chiribella \emph{et al.}, Indefinite causal order enables perfect quantum communication with zero capacity channels, \href{https://doi.org/10.1088/1367-2630/abe7a0}{New J. Phys. \textbf{23}, 033039 (2021)}.
@@ -650,6 +651,8 @@ The minimal distribution has a single entry point, \texttt{verify.py}, requiring
 \bibitem{OCB} O. Oreshkov, F. Costa, and C. Brukner, Quantum correlations with no causal order, \href{https://doi.org/10.1038/ncomms2076}{Nat. Commun. \textbf{3}, 1092 (2012)}.
 \bibitem{PurificationAxiom} G. Chiribella, G. M. D'Ariano, and P. Perinotti, Probabilistic theories with purification, \href{https://doi.org/10.1103/PhysRevA.81.062348}{Phys. Rev. A \textbf{81}, 062348 (2010)}.
 \bibitem{purif} M. Ara\'{u}jo, A. Feix, M. Navascu\'{e}s, and C. Brukner, A purification postulate for quantum mechanics with indefinite causal order, \href{https://doi.org/10.22331/q-2017-04-26-10}{Quantum \textbf{1}, 10 (2017)}.
+\bibitem{UedaReversibility} M. Ueda and M. Kitagawa, Reversibility in quantum measurement processes, \href{https://doi.org/10.1103/PhysRevLett.68.3424}{Phys. Rev. Lett. \textbf{68}, 3424 (1992)}.
+\bibitem{KimMeasurementTradeoff} S. Hong, Y.-S. Kim, Y.-W. Cho, J. Kim, S.-W. Lee, and H.-T. Lim, Demonstration of Complete Information Trade-Off in Quantum Measurement, \href{https://doi.org/10.1103/PhysRevLett.128.050401}{Phys. Rev. Lett. \textbf{128}, 050401 (2022)}.
 \bibitem{BranciardCI} C. Branciard, M. Ara\'{u}jo, A. Feix, F. Costa, and C. Brukner, The simplest causal inequalities and their violation, \href{https://doi.org/10.1088/1367-2630/18/1/013008}{New J. Phys. \textbf{18}, 013008 (2016)}.
 \bibitem{Witness} M. Ara\'{u}jo \emph{et al.}, Witnessing causal nonseparability, \href{https://doi.org/10.1088/1367-2630/17/10/102001}{New J. Phys. \textbf{17}, 102001 (2015)}.
 \bibitem{WitnessGuide} C. Branciard, Witnesses of causal nonseparability: an introduction and a few case studies, \href{https://doi.org/10.1038/srep26018}{Sci. Rep. \textbf{6}, 26018 (2016)}.
@@ -661,9 +664,17 @@ The minimal distribution has a single entry point, \texttt{verify.py}, requiring
 \bibitem{Wechs} J. Wechs, A. A. Abbott, and C. Branciard, On the definition and characterisation of multipartite causal (non)separability, \href{https://doi.org/10.1088/1367-2630/aaf352}{New J. Phys. \textbf{21}, 013027 (2019)}.
 \bibitem{Wei} W. Wei and S. Pang, Extensibly Causally Separable Processes Admit Realizations as Quantum Circuits with Classical Control of Causal Order, arXiv:2609.18559v1 (2026).
 \bibitem{Wechs2026} J. Wechs, A. A. Abbott, and C. Branciard, All causally separable quantum processes are quantum circuits with classical control of causal order, arXiv:2609.20774v1 (2026).
+\bibitem{DuanQuantumNetworks} L.-M. Duan, M. D. Lukin, J. I. Cirac, and P. Zoller, Long-distance quantum communication with atomic ensembles and linear optics, \href{https://doi.org/10.1038/35106500}{Nature \textbf{414}, 413 (2001)}.
+\bibitem{XiaPhotonicGate} M. Chen, J.-S. Tang, M. Cai, Y. Lu, F. Nori, and K. Xia, High-dimensional two-photon quantum controlled phase-flip gate, \href{https://doi.org/10.1103/PhysRevResearch.6.033004}{Phys. Rev. Research \textbf{6}, 033004 (2024)}.
+\bibitem{ZhangTeleportation} X.-W. Luo, C. Zhang, I. Novikova, C. Qian, and S. Du, Wavelength conversion for single-photon polarization qubits through continuous-variable quantum teleportation, \href{https://doi.org/10.1103/PhysRevA.105.052444}{Phys. Rev. A \textbf{105}, 052444 (2022)}.
 \bibitem{SM} See Supplemental Material for process physicality, the general Born reduction, the transportation theorem, all rational SOS matrices, and independent verification commands.
 \bibitem{Trusted} H. Dourdent \emph{et al.}, Semi-Device-Independent Certification of Causal Nonseparability with Trusted Quantum Inputs, \href{https://doi.org/10.1103/PhysRevLett.129.090402}{Phys. Rev. Lett. \textbf{129}, 090402 (2022)}.
 \bibitem{Network} H. Dourdent \emph{et al.}, Network-Device-Independent Certification of Causal Nonseparability, \href{https://doi.org/10.22331/q-2024-10-30-1514}{Quantum \textbf{8}, 1514 (2024)}.
 \bibitem{QCQC} J. Wechs, H. Dourdent, A. A. Abbott, and C. Branciard, Quantum circuits with classical versus quantum control of causal order, \href{https://doi.org/10.1103/PRXQuantum.2.030335}{PRX Quantum \textbf{2}, 030335 (2021)}.
+\bibitem{QiMonitoredQEC} S. Choi, Y. Bao, X.-L. Qi, and E. Altman, Quantum Error Correction in Scrambling Dynamics and Measurement-Induced Phase Transition, \href{https://doi.org/10.1103/PhysRevLett.125.030505}{Phys. Rev. Lett. \textbf{125}, 030505 (2020)}.
+\bibitem{GarrawayPseudomode} B. M. Garraway, Nonperturbative decay of an atomic system in a cavity, \href{https://doi.org/10.1103/PhysRevA.55.2290}{Phys. Rev. A \textbf{55}, 2290 (1997)}.
+\bibitem{YuSuddenDeath} T. Yu and J. H. Eberly, Sudden Death of Entanglement, \href{https://doi.org/10.1126/science.1167343}{Science \textbf{323}, 598 (2009)}.
+\bibitem{PuOpenSystem} D. Fallas Padilla, V. So, A. Menon, R. Zhuravel, H. Pu, and G. Pagano, Delocalized Excitation Transfer in Open Quantum Systems with Long-Range Interactions, \href{https://doi.org/10.1103/bxwl-sbsn}{PRX Quantum \textbf{6}, 040301 (2025)}.
+\bibitem{Li2024NonHermitian} C. Li, Y. Wu, and W.-M. Liu, Non-Hermitian superfluid--Mott-insulator transition in the one-dimensional zigzag bosonic chains, \href{https://doi.org/10.1103/PhysRevB.109.214306}{Phys. Rev. B \textbf{109}, 214306 (2024)}.
 \end{thebibliography}
 \end{document}

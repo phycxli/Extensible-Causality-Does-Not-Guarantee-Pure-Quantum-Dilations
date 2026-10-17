@@ -1,7 +1,7 @@
 # Extensible Causality Does Not Guarantee Pure Quantum Dilations
 
 Exact rational certificates and independent verification code accompanying the
-manuscript by **Chengxi Li, Hao Zhu, and Wanzi Sun**.
+manuscript by **Chengxi Li, Hao Zhu, Kai Liu, and Wanzi Sun**.
 Correspondence: **Wanzi Sun**, wzsun@jnxy.edu.cn.
 
 The work constructs a full-rank process on four qubit ports whose probability
@@ -53,8 +53,8 @@ systems, including Windows checkouts with automatic line-ending conversion.
 
 The proof remains necessary for universal physical coverage, transportation
 sufficiency, convexity, and the externally cited pure-process structure theorem.
-Machine verification does not establish novelty, external peer approval, or
-journal acceptance. The radius is a sufficient absolute operator-norm bound;
+The code checks the exact algebra and constants; the universal statements
+follow from the accompanying proofs. The radius is a sufficient absolute operator-norm bound;
 it is not a percentage of experimental error or an optimal radius.
 
 ## Repository Contents
@@ -72,12 +72,9 @@ CITATION.cff                   repository citation metadata
 LICENSE                        existing MIT license supplied by the repository owner
 ```
 
-This is the minimal exact verification distribution. Optional certificate
-searches, conic optimizers, figure-regeneration scripts, HPC workflows, internal
-review records, and submission correspondence are outside this repository.
-`verify.py` is the supported entry point; some reusable helper modules also
-contain research-project audit functions whose historical inputs are absent
-from this minimal distribution.
+This repository provides the exact verification distribution, with `verify.py`
+as its supported entry point. Optional certificate searches, conic optimizers,
+and figure-regeneration workflows are not required to reproduce these checks.
 
 ## Citation And License
 
