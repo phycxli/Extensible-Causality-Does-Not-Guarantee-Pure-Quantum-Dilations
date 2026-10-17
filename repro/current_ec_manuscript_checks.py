@@ -429,7 +429,7 @@ def check_manuscript_texts(main, supplement):
             "operational_responses_transcriptions_checked": True,
             "all_compact_fragments_included": True, "bibliographies_equal": True,
             "citation_keys_defined": True, "bibliography_entry_count": len(defined),
-            "scope": "Textual coverage is a delivery check; the independently reviewed proof supplies logical coverage."}
+            "scope": "Textual coverage is checked here; logical coverage follows from the accompanying proof."}
 
 
 def audit_current(root=ROOT):
