@@ -1,0 +1,274 @@
+% Exact coefficients reconstructed directly from the printed TeX integers.
+% All coefficients below are unscaled integers; Residual = Q + Ideal - Target.
+For the coefficient table, use the short letters
+\begin{equation*}
+ (\ell_0,\ell_1,\ell_2,\ell_3)
+ =(L_{+,0},L_{+,1},L_{-,0},L_{-,1}),
+ \qquad p_{j,rc}=(P_j)_{rc},
+\end{equation*}
+where $j\in\{+,-\}$ and $r,c\in\{0,1\}$ label the projector and its qubit block.
+Adjacent letters are multiplied in the written order. Alice letters are moved
+before Bob letters using only interparty commutation; multiplication order
+within each party is retained. No projector relation is reduced before the
+coefficient comparison.
+
+The following finite word sets fix a complete basis for this expansion:
+\begin{align*}
+ \mathcal A&=\{1\}\cup
+ \{\ell_{2f+o}^{\dagger}\ell_{2f+o'}:
+           f,o,o'\in\{0,1\}\},\\
+ \mathcal P&=\{p_{j,rc}:j\in\{+,-\},\ r,c\in\{0,1\}\},\\
+ \mathcal B&=\{1\}\cup\mathcal P
+                    \cup\{bb':b,b'\in\mathcal P\},\\
+ \mathcal W&=\{ab:a\in\mathcal A,\ b\in\mathcal B\}.
+\end{align*}
+The numerical flag $f=0,1$ denotes $+,-$, respectively; $o,o'$ are the two
+Alice output indices. The symbols $a,b,b'$ in the set definitions stand for
+words, and $1$ is the empty word. Thus $\mathcal A$, $\mathcal B$, and
+$\mathcal W$ contain $9$, $73$, and $657$ distinct formal words.
+
+The nonzero scalar contractions generate $448$ distinct words before their
+coefficients are combined. Of these, $244$ cancel within $\mathcal Q$ and
+have zero coefficients in both $\mathcal H$ and $\mathcal I$. The other
+$204$ words are all listed in Table~\ref{tab:hall-sos-coefficients}: $48$
+belong to the support of $\mathcal H$, and $156$ have zero target coefficient
+and opposite $\mathcal Q$ and $\mathcal I$ coefficients. The remaining $209$
+words in $\mathcal W$ are not generated. Equivalently, every one of the
+$453$ words in $\mathcal W$ omitted from the table has Target, Q, Ideal,
+and Residual all equal to zero. This specifies the coefficients on the
+entire basis, including all words outside the target support.
+
+For each word $w$, the Target, Q, and Ideal columns give its coefficients
+in $-\kappa\mathcal H$, $\mathcal Q$, and $\mathcal I$, respectively, and
+Residual is Q plus Ideal minus Target. All entries are unscaled integers:
+the common factor $1/\kappa$ belongs to the SOS weights, not to this table.
+The notation $[X]_w$ denotes the coefficient of the word $w$ in a
+polynomial $X$.
+\begingroup
+\small
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.02}
+\begin{longtable}{@{}lrrrr@{}}
+\caption{$-\kappa\mathcal H=\mathcal Q+\mathcal I$, $\kappa=4\,000\,000$.}
+\label{tab:hall-sos-coefficients}\\
+\toprule
+Word & Target & Q & Ideal & Residual \\
+\midrule
+\endfirsthead
+\toprule
+Word & Target & Q & Ideal & Residual \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{5}{l}{$[\mathcal H]_w\ne0$}\\
+\midrule
+$p_{+,00}$ & 775000 & 170446 & 604554 & 0 \\
+$p_{+,11}$ & 775000 & 170446 & 604554 & 0 \\
+$p_{-,00}$ & 775000 & 170446 & 604554 & 0 \\
+$p_{-,11}$ & 775000 & 170446 & 604554 & 0 \\
+$\ell_{0}^\dagger \ell_{0}$ & 1465000 & 1465000 & 0 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,00}$ & -1400000 & -1849536 & 449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,01}$ & -300000 & -80238 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,10}$ & -300000 & -80238 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,11}$ & -1000000 & -1105266 & 105266 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,00}$ & -1400000 & -1849536 & 449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,01}$ & 300000 & 80238 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,10}$ & 300000 & 80238 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,11}$ & -1000000 & -1105266 & 105266 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{+,10}$ & -400000 & -756660 & 356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{-,10}$ & -400000 & -756660 & 356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{+,01}$ & -400000 & -756660 & 356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{-,01}$ & -400000 & -756660 & 356660 & 0 \\
+$\ell_{1}^\dagger \ell_{1}$ & 1465000 & 1465000 & 0 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,00}$ & -1000000 & -1105266 & 105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,01}$ & -300000 & -80238 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,10}$ & -300000 & -80238 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,11}$ & -1400000 & -1849536 & 449536 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,00}$ & -1000000 & -1105266 & 105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,01}$ & 300000 & 80238 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,10}$ & 300000 & 80238 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,11}$ & -1400000 & -1849536 & 449536 & 0 \\
+$\ell_{2}^\dagger \ell_{2}$ & 985000 & 985000 & 0 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,00}$ & -1000000 & -1468468 & 468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,01}$ & 300000 & 82966 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,10}$ & 300000 & 82966 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,11}$ & -600000 & -668468 & 68468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,00}$ & -1000000 & -1468468 & 468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,01}$ & -300000 & -82966 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,10}$ & -300000 & -82966 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,11}$ & -600000 & -668468 & 68468 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{+,10}$ & -400000 & -796628 & 396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{-,10}$ & -400000 & -796628 & 396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{+,01}$ & -400000 & -796628 & 396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{-,01}$ & -400000 & -796628 & 396628 & 0 \\
+$\ell_{3}^\dagger \ell_{3}$ & 985000 & 985000 & 0 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,00}$ & -600000 & -668468 & 68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,01}$ & 300000 & 82966 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,10}$ & 300000 & 82966 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,11}$ & -1000000 & -1468468 & 468468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,00}$ & -600000 & -668468 & 68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,01}$ & -300000 & -82966 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,10}$ & -300000 & -82966 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,11}$ & -1000000 & -1468468 & 468468 & 0 \\
+\midrule
+\multicolumn{5}{l}{$[\mathcal H]_w=0$}\\
+\midrule
+$p_{+,00} p_{+,00}$ & 0 & 604554 & -604554 & 0 \\
+$p_{+,00} p_{+,01}$ & 0 & 2728 & -2728 & 0 \\
+$p_{+,00} p_{-,00}$ & 0 & 160986 & -160986 & 0 \\
+$p_{+,01}$ & 0 & -2728 & 2728 & 0 \\
+$p_{+,01} p_{+,10}$ & 0 & 604554 & -604554 & 0 \\
+$p_{+,01} p_{+,11}$ & 0 & 2728 & -2728 & 0 \\
+$p_{+,01} p_{-,10}$ & 0 & 160986 & -160986 & 0 \\
+$p_{+,10}$ & 0 & -2728 & 2728 & 0 \\
+$p_{+,10} p_{+,00}$ & 0 & 2728 & -2728 & 0 \\
+$p_{+,10} p_{+,01}$ & 0 & 604554 & -604554 & 0 \\
+$p_{+,10} p_{-,01}$ & 0 & 160986 & -160986 & 0 \\
+$p_{+,11} p_{+,10}$ & 0 & 2728 & -2728 & 0 \\
+$p_{+,11} p_{+,11}$ & 0 & 604554 & -604554 & 0 \\
+$p_{+,11} p_{-,11}$ & 0 & 160986 & -160986 & 0 \\
+$p_{-,00} p_{+,00}$ & 0 & 160986 & -160986 & 0 \\
+$p_{-,00} p_{-,00}$ & 0 & 604554 & -604554 & 0 \\
+$p_{-,00} p_{-,01}$ & 0 & -2728 & 2728 & 0 \\
+$p_{-,01}$ & 0 & 2728 & -2728 & 0 \\
+$p_{-,01} p_{+,10}$ & 0 & 160986 & -160986 & 0 \\
+$p_{-,01} p_{-,10}$ & 0 & 604554 & -604554 & 0 \\
+$p_{-,01} p_{-,11}$ & 0 & -2728 & 2728 & 0 \\
+$p_{-,10}$ & 0 & 2728 & -2728 & 0 \\
+$p_{-,10} p_{+,01}$ & 0 & 160986 & -160986 & 0 \\
+$p_{-,10} p_{-,00}$ & 0 & -2728 & 2728 & 0 \\
+$p_{-,10} p_{-,01}$ & 0 & 604554 & -604554 & 0 \\
+$p_{-,11} p_{+,11}$ & 0 & 160986 & -160986 & 0 \\
+$p_{-,11} p_{-,10}$ & 0 & -2728 & 2728 & 0 \\
+$p_{-,11} p_{-,11}$ & 0 & 604554 & -604554 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,00} p_{+,00}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,00} p_{+,01}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,00} p_{-,00}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,01} p_{+,10}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,01} p_{+,11}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,01} p_{-,10}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,10} p_{+,00}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,10} p_{+,01}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,10} p_{-,01}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,11} p_{+,10}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,11} p_{+,11}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{+,11} p_{-,11}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,00} p_{+,00}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,00} p_{-,00}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,00} p_{-,01}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,01} p_{+,10}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,01} p_{-,10}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,01} p_{-,11}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,10} p_{+,01}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,10} p_{-,00}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,10} p_{-,01}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,11} p_{+,11}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,11} p_{-,10}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{0}^\dagger \ell_{0} p_{-,11} p_{-,11}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{+,10} p_{+,00}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{+,10} p_{-,00}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{+,11} p_{+,10}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{+,11} p_{-,10}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{-,10} p_{+,00}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{-,10} p_{-,00}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{-,11} p_{+,10}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{0}^\dagger \ell_{1} p_{-,11} p_{-,10}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{+,00} p_{+,01}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{+,00} p_{-,01}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{+,01} p_{+,11}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{+,01} p_{-,11}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{-,00} p_{+,01}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{-,00} p_{-,01}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{-,01} p_{+,11}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{0} p_{-,01} p_{-,11}$ & 0 & 356660 & -356660 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,00} p_{+,00}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,00} p_{+,01}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,00} p_{-,00}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,01} p_{+,10}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,01} p_{+,11}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,01} p_{-,10}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,10} p_{+,00}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,10} p_{+,01}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,10} p_{-,01}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,11} p_{+,10}$ & 0 & -219762 & 219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,11} p_{+,11}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{+,11} p_{-,11}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,00} p_{+,00}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,00} p_{-,00}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,00} p_{-,01}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,01} p_{+,10}$ & 0 & 328400 & -328400 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,01} p_{-,10}$ & 0 & 105266 & -105266 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,01} p_{-,11}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,10} p_{+,01}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,10} p_{-,00}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,10} p_{-,01}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,11} p_{+,11}$ & 0 & 672670 & -672670 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,11} p_{-,10}$ & 0 & 219762 & -219762 & 0 \\
+$\ell_{1}^\dagger \ell_{1} p_{-,11} p_{-,11}$ & 0 & 449536 & -449536 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,00} p_{+,00}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,00} p_{+,01}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,00} p_{-,00}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,01} p_{+,10}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,01} p_{+,11}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,01} p_{-,10}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,10} p_{+,00}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,10} p_{+,01}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,10} p_{-,01}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,11} p_{+,10}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,11} p_{+,11}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{+,11} p_{-,11}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,00} p_{+,00}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,00} p_{-,00}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,00} p_{-,01}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,01} p_{+,10}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,01} p_{-,10}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,01} p_{-,11}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,10} p_{+,01}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,10} p_{-,00}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,10} p_{-,01}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,11} p_{+,11}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,11} p_{-,10}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{2}^\dagger \ell_{2} p_{-,11} p_{-,11}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{+,10} p_{+,00}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{+,10} p_{-,00}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{+,11} p_{+,10}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{+,11} p_{-,10}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{-,10} p_{+,00}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{-,10} p_{-,00}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{-,11} p_{+,10}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{2}^\dagger \ell_{3} p_{-,11} p_{-,10}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{+,00} p_{+,01}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{+,00} p_{-,01}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{+,01} p_{+,11}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{+,01} p_{-,11}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{-,00} p_{+,01}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{-,00} p_{-,01}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{-,01} p_{+,11}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{2} p_{-,01} p_{-,11}$ & 0 & 396628 & -396628 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,00} p_{+,00}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,00} p_{+,01}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,00} p_{-,00}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,01} p_{+,10}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,01} p_{+,11}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,01} p_{-,10}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,10} p_{+,00}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,10} p_{+,01}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,10} p_{-,01}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,11} p_{+,10}$ & 0 & 217034 & -217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,11} p_{+,11}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{+,11} p_{-,11}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,00} p_{+,00}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,00} p_{-,00}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,00} p_{-,01}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,01} p_{+,10}$ & 0 & 288902 & -288902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,01} p_{-,10}$ & 0 & 68468 & -68468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,01} p_{-,11}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,10} p_{+,01}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,10} p_{-,00}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,10} p_{-,01}$ & 0 & 468468 & -468468 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,11} p_{+,11}$ & 0 & 688902 & -688902 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,11} p_{-,10}$ & 0 & -217034 & 217034 & 0 \\
+$\ell_{3}^\dagger \ell_{3} p_{-,11} p_{-,11}$ & 0 & 468468 & -468468 & 0 \\
+\end{longtable}
+\endgroup

@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[letterpaper,margin=0.9in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,mathtools,array,booktabs}
+\usepackage{amsmath,amssymb,amsthm,mathtools,array,booktabs,longtable}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\CS}{\mathrm{CS}}
@@ -106,7 +106,7 @@ where $\delta,\alpha,\beta$ are the coefficients of $\sigma_z^{A_I}$, $\sigma_z^
  \frac38(2),\quad\frac{17}{40}(2).
  \label{eq:spectrum}
 \end{equation}
-Consequently $W_*$ is a full-rank valid process and its smallest eigenvalue is $1/40$.
+Consequently $W_*$ is a full-rank valid process and its smallest eigenvalue is $1/40$. Full rank places this example inside the positive cone; neither the EC proof nor the witness and structure-theorem exclusion uses an inverse of $W_*$. The EC neighborhood in Section~\ref{sec:robustness} follows from mixing with an explicit CS inner ball, not from full rank alone.
 
 Let $\Pi_-=[I-\sum_{k=x,y,z}\sigma_k\otimes\sigma_k]/4$ be the singlet projector on $A_OB_I$. Define the Hermitian causal witness $S$ by
 \begin{equation}
@@ -173,7 +173,9 @@ where $M_s$ represents Alice's event with measured result $s$, and $N_{r|y}$ Bob
 where angle brackets denote the average recorded outcome conditional on the subscripted setting. Every displayed event is CP and each complete instrument is TP. These two separate experiments illustrate the operator's directional dependences; they do not supply its universal EC proof or a circuit realization. The independent verifier \texttt{repro/independent\_operational\_response\_audit.py} forms the standard Choi matrices from the physical maps, applies the full transpose, and checks all probabilities and a deliberately incorrect $\sigma_y$ transpose.
 
 \section{Why nonseparability excludes every finite purification}
-The pure bipartite process structure theorem~\cite{Yokojima,Cyclic} applies to a pure process whose unitary maps $P A_O B_O$ to $A_I B_I F$. It gives orthogonal decompositions of its past and future spaces into an $A\prec B$ sector and a $B\prec A$ sector. The unitary restricted to each sector is an ordered pure comb. This includes degenerate or zero sectors.
+We use the finite-dimensional two-slot structure theorem of Ref.~\cite{Yokojima}, with the following assumptions. The extension is a valid two-slot superchannel. Purity means that inserting any pair of local unitaries, including arbitrary finite local ancillary inputs and outputs, yields a unitary from the global past and ancillary inputs to the global future and ancillary outputs (Definition 4 of that reference). No causal model or causal separability is assumed. Theorem 1 represents such a process by a unitary $U:P\otimes A_O\otimes B_O\to A_I\otimes B_I\otimes F$, where $P,F$ are the added global past and future spaces. Their dimensions are arbitrary finite values compatible with unitarity; no bound involving the rank of $W$ is imposed. Every candidate pure dilation in our definition has these properties.
+
+Theorems 4 and 5 of Ref.~\cite{Yokojima} decompose $U$ into an orthogonal direct sum of two ordered pure combs. Specifically, $P=P^{A\prec B}\oplus P^{B\prec A}$ and $F=F^{A\prec B}\oplus F^{B\prec A}$, where $\oplus$ denotes an orthogonal direct sum and the superscripts label the order sectors. The restriction of $U$ to each sector is a pure comb of that order. A fixed-order comb is included by omitting the other sector, so both sectors need not have nonzero dimension. The implication for purifiability is Corollary 1 of that reference; it was independently established in Ref.~\cite{Cyclic}.
 
 Insert any normalized pure past state $|p\rangle=|p_{A\prec B}\rangle+|p_{B\prec A}\rangle$, where the subscripts identify its components in the two ordered past sectors. Although these components may be coherent, their images lie in orthogonal future sectors. Tracing $F$ removes their cross terms. The reduced process is therefore
 \begin{equation}
@@ -183,14 +185,14 @@ Insert any normalized pure past state $|p\rangle=|p_{A\prec B}\rangle+|p_{B\prec
 \end{equation}
 where $W^{A\prec B},W^{B\prec A}$ are the subnormalized ordered process components, with weights $\|p_{A\prec B}\|^2$ and $\|p_{B\prec A}\|^2$; these are the squared Hilbert-space norms of the past components. No rank condition or bound on the added environment enters this argument.
 
-Conversely, a finite CS process has ordered-comb Stinespring dilations of its two normalized branches. Purify each branch's source and retain every channel environment. Padding the branch environments permits a controlled direct sum of the two ordered pure dilations. Prepare a coherent pure past state with amplitudes equal to the square roots of the branch weights and retain an orthogonal order flag in the future. Discarding that future yields the original CS process. Therefore, for the present scope of trivial \emph{original} past and future,
+Conversely, a finite CS process has ordered-comb Stinespring dilations of its two normalized branches~\cite{Stinespring,QuantumNetworks,purif}. Purify each branch's source and retain every channel environment. Since all original ports are qubits, the memory spaces can be padded to make every step's input and output dimensions equal; each isometry on the occupied subspace then extends to a unitary on the full space. Padding the branch environments permits a controlled direct sum of the two ordered pure dilations. Prepare a coherent pure past state with amplitudes equal to the square roots of the branch weights and retain an orthogonal order flag in the future. Discarding that future yields the original CS process. Zero-weight branches can be omitted. Therefore, for the present scope of trivial \emph{original} past and future,
 \begin{equation}
  \mathrm{Purifiable}=\CS.
  \label{eq:purifiable-CS}
 \end{equation}
-The equality concerns sets of processes within the stated scope. The witness~\eqref{eq:witness-exact-values} excludes $W_*$ from both sets. It remains to prove EC.
+The equality concerns sets of processes within the stated scope and follows from these prior structure and dilation results. Reference~\cite{purif} already discusses purification of ordered processes and their incoherent mixtures in Sec. 3, and asks in Sec. 8 whether extensible causality guarantees purification. The witness~\eqref{eq:witness-exact-values} excludes $W_*$ from CS and thus from purifiability. The new step below is to establish EC for arbitrary finite shared inputs.
 
-The same exclusion rules out a standard deterministic quantum circuit with quantum control of causal order (QC-QC). Every such circuit admits a unitary extension by retaining its internal environments~\cite{QCQC}. Preparing its fixed global input and discarding its future would constitute the purification excluded above. This statement concerns the standard circuit class in which each external operation is used once; postselected simulations and different implementation frameworks are outside its scope.
+The same exclusion applies to the circuit classes of Ref.~\cite{QCQC}. Quantum circuits with classical control of causal order (QC-CC) select the next unused operation using classical records, which may depend on preceding outcomes. Quantum circuits with quantum control (QC-QC) allow coherent superpositions of these choices. We use the deterministic circuit classes characterized there (Sec. V.2 and Proposition 7 for QC-QC): each external operation is used once and no postselection is allowed. Retaining the internal environments, suitably enlarging the spaces, and completing the resulting isometries to unitaries gives a pure extension, as discussed in Sec. VIII of that reference. Preparing its fixed global input and discarding the entire future would therefore constitute a purification of the reduced process. More directly, Appendix A.3 of that reference shows that, for two operations and trivial original past and future, QC-QC and QC-CC both reduce to probabilistic mixtures of the two fixed orders. Thus coherent control does not permit these circuits to realize $W_*$. This conclusion concerns the reduced bipartite process; it does not assert causal separability when a nontrivial global future is retained.
 
 \section{Refinement and the complex Born reduction}
 \subsection{Refining the two classical flags}
@@ -254,7 +256,7 @@ Choose the same constants for every experiment:
  c=\frac{1-q}{2}=\frac{31}{160},
  \label{eq:margins}
 \end{equation}
-where $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
+where $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. The rational values of $q,\theta$ were chosen near a candidate from a joint numerical search and are certified by the exact identity below. These are sufficient choices; neither uniqueness nor optimality of the margins is claimed. Once $q$ is chosen, $c$ is fixed by normalization: a complete Bob instrument gives $\Tr[(I_{B_I}\otimes\rho)I]=2$, so its total contribution must obey $2c=1-q$. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
 \begin{equation}
  g_a(x)=w_s\Tr\tau_{a,s|x},\qquad
  h_b(y)=c\Tr[(I_{B_I}\otimes\rho)E_{b|y}],
@@ -405,7 +407,7 @@ The only equalities used in the identity are Bob's projector block relations. Fo
             -\delta_{j\ell}(P_j)_{rc}=0.
  \label{eq:ideal-relations}
 \end{equation}
-There are sixteen such block polynomials $\mathfrak r^{j\ell}_{rc}$, all zero for the physical projectors. Their scalar and Alice-quadratic multiples give all 144 coefficients of the certificate. Define the ideal contribution $\mathcal I$ and its operator multipliers $B^{j\ell}_{rc}$ by
+There are sixteen such block polynomials $\mathfrak r^{j\ell}_{rc}$, all zero for the physical projectors. Their scalar and Alice-quadratic multiples carry the 144 integer multiplier entries of the certificate. These relations suffice for the displayed identity; a complete presentation of all projector identities is not required. Define the ideal contribution $\mathcal I$ and its operator multipliers $B^{j\ell}_{rc}$ by
 \begin{align}
  \mathcal I&=\sum_{j,\ell,r,c}B^{j\ell}_{rc}\,\mathfrak r^{j\ell}_{rc},\notag\\
  B^{j\ell}_{rc}&=b^{j\ell}_{rc}I+
@@ -440,6 +442,9 @@ With the rational parameters~\eqref{eq:margins}, direct expansion gives the poly
 \end{equation}
 The term $\mathcal I$ vanishes under the physical projector relations, while $\mathcal Q$ is positive. The identity holds in free Alice and Bob words with interparty commutation and the usual adjoint rule; within each party the multiplication order is retained. Every $N_k$ is real symmetric and strictly positive definite. Table~\ref{tab:hall-sos-leading-minors} gives their exact leading principal determinants $\Delta_r(N_k)$, with $r$ the principal-block size. In an LDL factorization, $L$ is unit lower triangular and $D$ diagonal; the positive pivots $d_r$ are successive determinant ratios. Consequently $\mathcal Q\succeq0$ and $\mathcal H\preceq0$.
 \input{hall_sos_positive_minors.tex}
+
+Table~\ref{tab:hall-sos-coefficients} lists the word coefficients of $-\kappa\mathcal H$, $\mathcal Q$, and $\mathcal I$, and their residual $\mathcal Q+\mathcal I+\kappa\mathcal H$. It includes the $48$ nonzero target words and the $156$ additional words whose coefficients cancel. The specified finite word basis also accounts for all coefficients that vanish in each polynomial.
+\input{hall_sos_coefficient_check.tex}
 
 The eleven-block certificate before reflection splitting is also supplied. Its integer coefficient system has size $656\times318$, rank $271$, and $47$ free coordinates. Rational recovery satisfies all coefficient equations exactly, and exact LDL factorizations certify all eleven weights. Averaging under joint $A_O/B_I$ Pauli $\sigma_x$, then under joint Pauli $\sigma_z$ with Bob's $+/-$ reports interchanged, preserves the Hall polynomial and positivity. Splitting the four eight-dimensional blocks yields precisely the fifteen matrices printed here. This transformation is algebraic and uses no further numerical optimization.
 
@@ -498,7 +503,7 @@ To prove exactness, set $v=1-\eta$ for the remaining visibility and write the tw
           +\frac{3v}{10}\sigma_z^{A_I}\sigma_x^{B_I}\sigma_z^{B_O}\right].
  \label{eq:noise-ordered-decomposition}
 \end{align}
-Their sum is $W_\eta$, and each obeys its ordered-process linear constraints. The first is positive with eigenvalues $0$ and $v/5$ and weight $3v/5$. The second has weight $1-3v/5$ and minimum eigenvalue $(1-11v/10)/4$, which is nonnegative exactly when $\eta\ge1/11$. Hence
+Their sum is $W_\eta$, and each obeys its ordered-process linear constraints. A subnormalized component's weight is its trace divided by four, since a normalized process has trace four. The two traces are $\Tr W_\eta^{A\prec B}=12v/5$ and $\Tr W_\eta^{B\prec A}=4-12v/5$; their weights are therefore $3v/5$ and $1-3v/5$, respectively. The first component is positive with eigenvalues $0$ and $v/5$. The second has minimum eigenvalue $(1-11v/10)/4$, which is nonnegative exactly when $\eta\ge1/11$. Only in that interval do these components constitute a positive ordered decomposition. Hence
 \begin{equation}
  W_\eta\in\EC\quad\text{for all }\eta,\qquad
  W_\eta\in\mathrm{Purifiable}\Longleftrightarrow
@@ -602,7 +607,7 @@ The conclusions concern finite original qubit ports and arbitrary finite shared-
 
 The package supplies the original eleven-block certificate in
 \path{results/exact_double_flag_hall_sos.json}, its symmetry average in
-\path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The three TeX fragments used above are generated directly from those rational data.
+\path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The matrix, multiplier, and determinant TeX fragments used above are generated directly from those rational data. Table~\ref{tab:hall-sos-coefficients} additionally displays the coefficient expansion of the printed formulas.
 
 From the project root, the following commands verify both small certificates using Python's standard-library \texttt{Fraction} arithmetic, independently of the optimization used to obtain them:
 \begingroup\small

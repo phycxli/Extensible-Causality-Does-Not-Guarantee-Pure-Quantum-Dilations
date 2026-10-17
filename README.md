@@ -28,7 +28,7 @@ The commands also work in Windows PowerShell. A successful run exits with code
 zero and ends with:
 
 ```text
-ALL_EXACT_CHECKS_PASSED 25 frozen inputs
+ALL_EXACT_CHECKS_PASSED 27 frozen inputs
 ```
 
 The verifier checks the input manifest both before and after execution. Results
@@ -49,6 +49,8 @@ systems, including Windows checkouts with automatic line-ending conversion.
   fraction `1/22`, using the complete valid Pauli basis.
 - The printed compact matrices, positive principal minors, ideal multipliers,
   manuscript constants, and matching bibliographies.
+- The full printed free-word coefficient table, reconstructed directly from
+  the TeX matrices and multipliers with independent rational arithmetic.
 - Seven boundary and rejection tests for the neighborhood claim.
 
 The proof remains necessary for universal physical coverage, transportation
@@ -67,7 +69,7 @@ results/                       saved rational certificates and compact tables
 tests/                         boundary and rejection controls
 main/                          English manuscript, source, and figure PDFs
 supplement/                    English proof and exact matrix TeX fragments
-SHA256SUMS.txt                  checksum manifest for 25 frozen input files
+SHA256SUMS.txt                  checksum manifest for 27 frozen input files
 CITATION.cff                   repository citation metadata
 LICENSE                        existing MIT license supplied by the repository owner
 ```

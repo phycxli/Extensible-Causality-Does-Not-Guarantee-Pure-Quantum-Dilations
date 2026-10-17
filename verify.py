@@ -51,6 +51,7 @@ def verify(output):
         from repro.independent_counterexample_process_audit import audit as process_audit
         from repro.independent_ec_robustness_audit import audit as robustness_audit
         from repro.independent_operational_response_audit import audit as response_audit
+        from repro.independent_printed_word_identity import audit as printed_audit
         from repro.current_ec_manuscript_checks import check_compact_artifacts, check_manuscript_texts
 
         for name, source in (
@@ -70,13 +71,14 @@ def verify(output):
             (ROOT / "supplement/supplement.tex").read_text(encoding="utf-8-sig"),
         )
         record["compact_tables"] = check_compact_artifacts(ROOT)
+        record["printed_word_identity"] = printed_audit(root=ROOT, output=output / "printed_word_identity.json")
         suite = unittest.defaultTestLoader.loadTestsFromName("tests.test_ec_robustness")
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         record["rejection_tests"] = {"run": result.testsRun, "passed": result.wasSuccessful()}
         record["input_sha256_after"] = checked_manifest(ROOT)
         record["inputs_unchanged"] = record["input_sha256_after"] == before
         record["success"] = (
-            all(record["audits"].values()) and result.wasSuccessful()
+            all(record["audits"].values()) and record["printed_word_identity"]["accepted"] and result.wasSuccessful()
             and result.testsRun >= 7 and record["inputs_unchanged"]
         )
     except Exception as error:
