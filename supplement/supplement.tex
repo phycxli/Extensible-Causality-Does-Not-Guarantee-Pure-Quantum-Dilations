@@ -602,39 +602,8 @@ The full ball also includes valid directions outside this three-parameter family
 
 The conclusions concern finite original qubit ports and arbitrary finite shared-input ancillary assistance. Trusted-input and network certification use additional assumptions~\cite{Trusted,Network}. No claim is made about all certification scenarios, infinite-dimensional processes, or multiple-use composition; a tensor product of mixed-order processes is not automatically a valid process for grouped laboratories.
 
-\section{Reproduction and independent checks}
-\emph{Data availability.---}The exact rational data and verification code are publicly available in the \href{https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations}{GitHub repository} and in the accompanying supplemental files. They check the process, witness, laboratory responses, and stability without optimization.
-
-The package supplies the original eleven-block SOS representation in
-\path{results/exact_double_flag_hall_sos.json}, its symmetry average in
-\path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The matrix, multiplier, and determinant TeX fragments used above are generated directly from those rational data. Table~\ref{tab:hall-sos-coefficients} additionally displays the coefficient expansion of the printed formulas.
-
-From the project root, the following commands verify the original and symmetry-averaged compact SOS representations using Python's standard-library \texttt{Fraction} arithmetic, independently of the optimization used to obtain them:
-\begingroup\small
-\begin{verbatim}
-python -m repro.independent_general_ec_certificate_audit \
-  --certificate results/exact_double_flag_hall_sos.json \
-  --output results/independent_general_ec_certificate_audit.json
-python -m repro.independent_general_ec_certificate_audit \
-  --certificate results/exact_double_flag_hall_sos_symmetric.json \
-  --output results/independent_symmetric_hall_sos_audit.json
-python -m repro.independent_counterexample_process_audit
-python -m repro.independent_ec_robustness_audit
-\end{verbatim}
-\endgroup
-The continuation syntax shown is for a POSIX shell; the same arguments can be supplied on a single line on Windows. Table regeneration and the independent conic audit are:
-\begingroup\small
-\begin{verbatim}
-python -m repro.export_hall_sos_tables
-python results/literature_scope/independent_two_certificate_ec_audit.py
-python results/literature_scope/independent_ec_physical_coverage_audit.py
-\end{verbatim}
-\endgroup
-Regenerating the tables requires SymPy, NumPy, SciPy, and CVXPY. The calculation evaluates the supplied rational coefficients exactly, without further optimization. The verification reports equation residuals and the rational pivots or determinants that establish positivity.
-
-Finite numerical tests with complex mixed states compare the original Born table with Eq.~\eqref{eq:kernel}, refine the flags, enumerate every subset cut, and solve the transportation problem. The tests include multiple Kraus branches per report and unequal ancillary dimensions. Inserting an additional transpose makes the two probability calculations disagree. The Born-reduction residuals are below $5\times10^{-17}$ and the transportation residuals below $2\times10^{-15}$. These tests check the Choi convention and its implementation; the dimension-independent result follows from Eqs.~\eqref{eq:SOS-identity} and \eqref{eq:flow-cuts}.
-
-The portable distribution provides a single entry point, \texttt{verify.py}, and requires only Python and SymPy. It checks the original and symmetry-averaged compact SOS representations, process validity, the witness, the ordered decomposition along every valid Pauli basis direction, and the neighborhood constants. All checks use the supplied rational data and require neither optimization nor regeneration of the rational data. The reductions and proofs in Sections~\ref{sec:proof-map}--\ref{sec:robustness} establish coverage of arbitrary finite laboratory experiments; the pure-process structure theorem~\cite{Yokojima,Cyclic} supplies the link between causal nonseparability and the exclusion of finite pure dilations.
+\section{Data availability}
+The exact rational data and verification code are publicly available in the \href{https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations}{GitHub repository} and in the accompanying supplemental files.
 
 \begin{thebibliography}{99}
 \bibitem{Stinespring} W. F. Stinespring, Positive functions on $C^*$-algebras, \href{https://doi.org/10.1090/S0002-9939-1955-0069403-4}{Proc. Am. Math. Soc. \textbf{6}, 211 (1955)}.
@@ -672,7 +641,7 @@ The portable distribution provides a single entry point, \texttt{verify.py}, and
 \bibitem{DuanQuantumNetworks} L.-M. Duan, M. D. Lukin, J. I. Cirac, and P. Zoller, Long-distance quantum communication with atomic ensembles and linear optics, \href{https://doi.org/10.1038/35106500}{Nature \textbf{414}, 413 (2001)}.
 \bibitem{XiaPhotonicGate} M. Chen, J.-S. Tang, M. Cai, Y. Lu, F. Nori, and K. Xia, High-dimensional two-photon quantum controlled phase-flip gate, \href{https://doi.org/10.1103/PhysRevResearch.6.033004}{Phys. Rev. Research \textbf{6}, 033004 (2024)}.
 \bibitem{ZhangTeleportation} X.-W. Luo, C. Zhang, I. Novikova, C. Qian, and S. Du, Wavelength conversion for single-photon polarization qubits through continuous-variable quantum teleportation, \href{https://doi.org/10.1103/PhysRevA.105.052444}{Phys. Rev. A \textbf{105}, 052444 (2022)}.
-\bibitem{SM} See Supplemental Material for process physicality, the general Born reduction, the transportation theorem, all rational SOS matrices, and independent verification commands.
+\bibitem{SM} See Supplemental Material for process physicality, the general Born reduction, the transportation theorem, and all rational SOS matrices.
 \bibitem{Trusted} H. Dourdent \emph{et al.}, Semi-Device-Independent Certification of Causal Nonseparability with Trusted Quantum Inputs, \href{https://doi.org/10.1103/PhysRevLett.129.090402}{Phys. Rev. Lett. \textbf{129}, 090402 (2022)}.
 \bibitem{Network} H. Dourdent \emph{et al.}, Network-Device-Independent Certification of Causal Nonseparability, \href{https://doi.org/10.22331/q-2024-10-30-1514}{Quantum \textbf{8}, 1514 (2024)}.
 \bibitem{QCQC} J. Wechs, H. Dourdent, A. A. Abbott, and C. Branciard, Quantum circuits with classical versus quantum control of causal order, \href{https://doi.org/10.1103/PRXQuantum.2.030335}{PRX Quantum \textbf{2}, 030335 (2021)}.
