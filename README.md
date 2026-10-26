@@ -1,6 +1,6 @@
 # Extensible Causality Does Not Guarantee Pure Quantum Dilations
 
-Exact rational certificates and independent verification code accompanying the
+Exact rational data and independent verification code accompanying the
 manuscript by **Chengxi Li, Hao Zhu, Kai Liu, and Wanzi Sun**.
 Correspondence: **Wanzi Sun**, wzsun@jnxy.edu.cn.
 
@@ -14,7 +14,7 @@ Supplemental Material.
 ## Quick Start
 
 Requirements: **Python 3.10 or later** and **SymPy 1.14.0**. No optimizer, GPU,
-HPC account, or LaTeX installation is needed to verify the saved certificates.
+HPC account, or LaTeX installation is needed to verify the saved rational data.
 
 ```bash
 git clone https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations.git
@@ -41,7 +41,7 @@ systems, including Windows checkouts with automatic line-ending conversion.
 
 - The original and symmetry-averaged operator sum-of-squares identities,
   coefficient by coefficient, with exact rational arithmetic.
-- Positive semidefiniteness of all rational certificate weights.
+- Positive semidefiniteness of all rational SOS weight matrices.
 - Process normalization, linear constraints, positive spectrum, causal witness,
   and the exact white-noise causal-separability threshold.
 - Two local laboratory response protocols and their complex-transpose control.
@@ -65,7 +65,7 @@ it is not a percentage of experimental error or an optimal radius.
 verify.py                      supported verification entry point
 environment/                   pinned verification dependency
 repro/                         independent exact verifiers
-results/                       saved rational certificates and compact tables
+results/                       saved rational SOS data and compact tables
 tests/                         boundary and rejection controls
 main/                          English manuscript, source, and figure PDFs
 supplement/                    English proof and exact matrix TeX fragments
@@ -75,7 +75,7 @@ LICENSE                        existing MIT license supplied by the repository o
 ```
 
 This repository provides the exact verification distribution, with `verify.py`
-as its supported entry point. Optional certificate searches, conic optimizers,
+as its supported entry point. Optional SOS searches, conic optimizers,
 and figure-regeneration workflows are not required to reproduce these checks.
 
 ## Citation And License

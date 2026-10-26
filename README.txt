@@ -11,7 +11,7 @@ From the extracted distribution root:
 
 Success: ALL_EXACT_CHECKS_PASSED and exit code zero.
 The input SHA256 manifest is checked before and after verification.
-The original and symmetric SOS identities, rational positive weights,
+The original and symmetry-averaged SOS identities, rational SOS weight matrices,
 process constraints, spectrum, causal witness, noise threshold, laboratory
 responses, and conservative all-direction neighborhood are checked.
 No optimizer or HPC account is needed. The proof in the Supplemental

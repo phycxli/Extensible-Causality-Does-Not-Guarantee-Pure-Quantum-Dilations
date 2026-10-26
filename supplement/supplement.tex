@@ -256,7 +256,7 @@ Choose the same constants for every experiment:
  c=\frac{1-q}{2}=\frac{31}{160},
  \label{eq:margins}
 \end{equation}
-where $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. The rational values of $q,\theta$ were chosen near a candidate from a joint numerical search and are certified by the exact identity below. These are sufficient choices; neither uniqueness nor optimality of the margins is claimed. Once $q$ is chosen, $c$ is fixed by normalization: a complete Bob instrument gives $\Tr[(I_{B_I}\otimes\rho)I]=2$, so its total contribution must obey $2c=1-q$. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
+where $q$ is the order weight, $\theta$ adjusts Alice's relative flag weights $w_s$, and $c$ is the common coefficient of Bob's reference contribution. The rational values of $q,\theta$ were chosen near a candidate from a joint numerical search; their feasibility is established by the exact identity below. These are sufficient choices; neither uniqueness nor optimality of the margins is claimed. Once $q$ is chosen, $c$ is fixed by normalization: a complete Bob instrument gives $\Tr[(I_{B_I}\otimes\rho)I]=2$, so its total contribution must obey $2c=1-q$. For refined reports $a$ and $b$, with the port flags included in the reports, prescribe
 \begin{equation}
  g_a(x)=w_s\Tr\tau_{a,s|x},\qquad
  h_b(y)=c\Tr[(I_{B_I}\otimes\rho)E_{b|y}],
@@ -381,7 +381,7 @@ The eight-entry bases split under a reflection. For $v_s$ choose representative 
 where ``rep'' and ``partner'' extract entries in the ordered index lists just specified; superscripts $\mathrm e,\mathrm o$ denote even and odd reflection parity. The even tuple uses $+$ and the odd tuple uses $-$. There is no square-root normalization factor.
 
 \subsection{The fifteen scalar contractions}
-Let $\kappa=4\,000\,000$ be the common weight denominator and $k_+=1,k_-=8$ the starting matrix indices for the two flag sectors. The fifteen integer coefficient matrices $N_0,\ldots,N_{14}$ listed below define the unscaled positive certificate operator $\mathcal Q$ by
+Let $\kappa=4\,000\,000$ be the common weight denominator and $k_+=1,k_-=8$ the starting matrix indices for the two flag sectors. The fifteen integer coefficient matrices $N_0,\ldots,N_{14}$ listed below define the unscaled positive semidefinite operator $\mathcal Q$ by
 \begin{align}
  \mathcal Q={}&\langle N_0,G(n)\rangle\notag\\
  &+\sum_{s=+,-}\Bigl[
@@ -407,7 +407,7 @@ The only equalities used in the identity are Bob's projector block relations. Fo
             -\delta_{j\ell}(P_j)_{rc}=0.
  \label{eq:ideal-relations}
 \end{equation}
-There are sixteen such block polynomials $\mathfrak r^{j\ell}_{rc}$, all zero for the physical projectors. Their scalar and Alice-quadratic multiples carry the 144 integer multiplier entries of the certificate. These relations suffice for the displayed identity; a complete presentation of all projector identities is not required. Define the ideal contribution $\mathcal I$ and its operator multipliers $B^{j\ell}_{rc}$ by
+There are sixteen such block polynomials $\mathfrak r^{j\ell}_{rc}$, all zero for the physical projectors. Their scalar and Alice-quadratic multiples carry the 144 integer entries specifying the multipliers in the identity. These relations suffice for the displayed identity; a complete presentation of all projector identities is not required. Define the ideal contribution $\mathcal I$ and its operator multipliers $B^{j\ell}_{rc}$ by
 \begin{align}
  \mathcal I&=\sum_{j,\ell,r,c}B^{j\ell}_{rc}\,\mathfrak r^{j\ell}_{rc},\notag\\
  B^{j\ell}_{rc}&=b^{j\ell}_{rc}I+
@@ -446,13 +446,13 @@ The term $\mathcal I$ vanishes under the physical projector relations, while $\m
 Table~\ref{tab:hall-sos-coefficients} lists the word coefficients of $-\kappa\mathcal H$, $\mathcal Q$, and $\mathcal I$, and their residual $\mathcal Q+\mathcal I+\kappa\mathcal H$. It includes the $48$ nonzero target words and the $156$ additional words whose coefficients cancel. The specified finite word basis also accounts for all coefficients that vanish in each polynomial.
 \input{hall_sos_coefficient_check.tex}
 
-The eleven-block certificate before reflection splitting is also supplied. Its integer coefficient system has size $656\times318$, rank $271$, and $47$ free coordinates. Rational recovery satisfies all coefficient equations exactly, and exact LDL factorizations certify all eleven weights. Averaging under joint $A_O/B_I$ Pauli $\sigma_x$, then under joint Pauli $\sigma_z$ with Bob's $+/-$ reports interchanged, preserves the Hall polynomial and positivity. Splitting the four eight-dimensional blocks yields precisely the fifteen matrices printed here. This transformation is algebraic and uses no further numerical optimization.
+The eleven-block rational SOS representation before reflection splitting is also supplied. Its integer coefficient system has size $656\times318$, rank $271$, and $47$ free coordinates. Rational recovery satisfies all coefficient equations exactly, and exact LDL factorizations establish positivity of all eleven weight matrices. Averaging under joint $A_O/B_I$ Pauli $\sigma_x$, then under joint Pauli $\sigma_z$ with Bob's $+/-$ reports interchanged, preserves the Hall polynomial and positivity. Splitting the four eight-dimensional blocks yields precisely the fifteen matrices printed here. This transformation is algebraic and uses no further numerical optimization.
 
 No Alice common-range, orthogonality, or nilpotent relation is used in Eq.~\eqref{eq:SOS-identity}. Its only Alice assumption is $R_s\succeq0$. The identity is therefore valid for arbitrary finite auxiliary dimensions. Taking its expectation in the embedded shared state proves $H\le0$.
 
 \section{Universal EC and an independent conic route}
 \label{sec:universal}
-The transportation lemma gives a useful sufficient criterion beyond the particular coefficients of $W_*$. For each shared state, prescribe nonnegative first-party marginals $g_a(x)$ and $h_b(y)$ of masses $q$ and $1-q$, where $q$ is independent of the settings. If every physical event-subset pair has Hall excess at most zero for all settings, the entire experiment is causal. An operator SOS valid in all physical representations is one way of proving these bounds simultaneously. The transportation criterion is general; the kernel, marginal choice, and rational weights supplied here certify the explicit example.
+The transportation lemma gives a useful sufficient criterion beyond the particular coefficients of $W_*$. For each shared state, prescribe nonnegative first-party marginals $g_a(x)$ and $h_b(y)$ of masses $q$ and $1-q$, where $q$ is independent of the settings. If every physical event-subset pair has Hall excess at most zero for all settings, the entire experiment is causal. An operator SOS valid in all physical representations is one way of proving these bounds simultaneously. The transportation criterion is general; the kernel, marginal choice, and rational weights supplied here establish EC for the explicit process.
 
 The arbitrary-dimensional inequality applies to the two Alice event subsets associated with any $\mathcal A$, and the two Bob event effects associated with any $\mathcal B$. Thus it proves every cut in Eq.~\eqref{eq:hall}. The transportation lemma proves a causal decomposition for every pure shared state and every finite instrument collection. For a mixed shared state, decompose it into pure states and combine their causal models; the weight $q$ in Eq.~\eqref{eq:margins} is common to all components. Equivalently, purify the state into an enlarged local input ancilla. Refinement and coarse graining then prove
 \begin{equation}
@@ -461,7 +461,7 @@ The arbitrary-dimensional inequality applies to the two Alice event subsets asso
 \end{equation}
 where the lack of a positive ordered-process mixture excludes a pure dilation despite causal records for every finite shared-input experiment.
 
-A second exact certificate is retained for the original, larger canonical conic relaxation. Its exact dual equations and zero objective provide an independent route to the same Hall bound. For completeness, the additional physical representation used by that relaxation can be attained without restricting CP events. Complete each accepted event by rejected Kraus matrices, pad the accepted slots for both sectors to the same number $a$, and pad the total environment to dimension $m$. Let $Q_E$ project onto these $a$ accepted slots. The complete Stinespring isometry $\mathcal V_s:\mathcal H_A\to\mathbb C^2\otimes\mathbb C^m$ extends to a unitary $\mathcal U_s$ on a space of dimension $2m$, with a common input embedding $J_A$ and $\mathcal U_sJ_A=\mathcal V_s$. For any common isometry $F_E:\mathbb C^m\to\mathbb C^{2m}$ set
+An exact feasible dual solution is also supplied for the original, larger canonical conic relaxation. Its exact dual equations and zero objective provide an independent route to the same Hall bound. For completeness, the additional physical representation used by that relaxation can be attained without restricting CP events. Complete each accepted event by rejected Kraus matrices, pad the accepted slots for both sectors to the same number $a$, and pad the total environment to dimension $m$. Let $Q_E$ project onto these $a$ accepted slots. The complete Stinespring isometry $\mathcal V_s:\mathcal H_A\to\mathbb C^2\otimes\mathbb C^m$ extends to a unitary $\mathcal U_s$ on a space of dimension $2m$, with a common input embedding $J_A$ and $\mathcal U_sJ_A=\mathcal V_s$. For any common isometry $F_E:\mathbb C^m\to\mathbb C^{2m}$ set
 \begin{equation}
  D_{s,o}=F_EQ_E(\langle o|\otimes I_m)\mathcal U_s,\qquad
  Q=F_EQ_EF_E^\dagger,
@@ -477,7 +477,7 @@ One further doubling gives
  \label{eq:nilpotent-dilation}
 \end{equation}
 where $A_{s,o}$ are the amplitudes embedded in the doubled space and $J_2$ its input embedding. This preserves the common output range and enforces
-$A_{s,o}A_{t,p}=0$ and $A_{s,o}^\dagger J_2=0$ for all sector labels $s,t$ and output-basis indices $o,p$. This gives the state-supported 45-word Gram basis of the canonical relaxation. These relations apply to this representation, not to arbitrary original event matrices. The small certificate of Section~\ref{sec:sos} does not need this construction.
+$A_{s,o}A_{t,p}=0$ and $A_{s,o}^\dagger J_2=0$ for all sector labels $s,t$ and output-basis indices $o,p$. This gives the state-supported 45-word Gram basis of the canonical relaxation. These relations apply to this representation, not to arbitrary original event matrices. The compact SOS identity of Section~\ref{sec:sos} does not need this construction.
 
 The independent rational verifier checks $10\,960$ canonical dual equations, an exact upper bound of zero, and positivity of the supported cone blocks. It also reconstructs the small SOS identity from the original Pauli contraction: the target polynomial contains $48$ nonzero words, and the coefficient residual vanishes identically.
 
@@ -603,13 +603,13 @@ The full ball also includes valid directions outside this three-parameter family
 The conclusions concern finite original qubit ports and arbitrary finite shared-input ancillary assistance. Trusted-input and network certification use additional assumptions~\cite{Trusted,Network}. No claim is made about all certification scenarios, infinite-dimensional processes, or multiple-use composition; a tensor product of mixed-order processes is not automatically a valid process for grouped laboratories.
 
 \section{Reproduction and independent checks}
-\emph{Data availability.---}The exact certificates and portable verification code are publicly available in the \href{https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations}{GitHub repository} and in the accompanying supplemental files. They check the process, witness, laboratory responses, and stability without optimization.
+\emph{Data availability.---}The exact rational data and verification code are publicly available in the \href{https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations}{GitHub repository} and in the accompanying supplemental files. They check the process, witness, laboratory responses, and stability without optimization.
 
-The package supplies the original eleven-block certificate in
+The package supplies the original eleven-block SOS representation in
 \path{results/exact_double_flag_hall_sos.json}, its symmetry average in
 \path{results/exact_double_flag_hall_sos_symmetric.json}, and the integer tables, ideal multipliers, and principal determinants in the three corresponding \texttt{hall\_sos\_*} JSON files. The matrix, multiplier, and determinant TeX fragments used above are generated directly from those rational data. Table~\ref{tab:hall-sos-coefficients} additionally displays the coefficient expansion of the printed formulas.
 
-From the project root, the following commands verify both small certificates using Python's standard-library \texttt{Fraction} arithmetic, independently of the optimization used to obtain them:
+From the project root, the following commands verify the original and symmetry-averaged compact SOS representations using Python's standard-library \texttt{Fraction} arithmetic, independently of the optimization used to obtain them:
 \begingroup\small
 \begin{verbatim}
 python -m repro.independent_general_ec_certificate_audit \
@@ -634,7 +634,7 @@ Regenerating the tables requires SymPy, NumPy, SciPy, and CVXPY. The calculation
 
 Finite numerical tests with complex mixed states compare the original Born table with Eq.~\eqref{eq:kernel}, refine the flags, enumerate every subset cut, and solve the transportation problem. The tests include multiple Kraus branches per report and unequal ancillary dimensions. Inserting an additional transpose makes the two probability calculations disagree. The Born-reduction residuals are below $5\times10^{-17}$ and the transportation residuals below $2\times10^{-15}$. These tests check the Choi convention and its implementation; the dimension-independent result follows from Eqs.~\eqref{eq:SOS-identity} and \eqref{eq:flow-cuts}.
 
-The portable distribution provides a single entry point, \texttt{verify.py}, and requires only Python and SymPy. It checks the two exact SOS certificates, process validity, the witness, the ordered decomposition along every valid Pauli basis direction, and the neighborhood constants. All checks use the supplied rational data and require neither optimization nor certificate regeneration. The reductions and proofs in Sections~\ref{sec:proof-map}--\ref{sec:robustness} establish coverage of arbitrary finite laboratory experiments; the pure-process structure theorem~\cite{Yokojima,Cyclic} supplies the link between causal nonseparability and the exclusion of finite pure dilations.
+The portable distribution provides a single entry point, \texttt{verify.py}, and requires only Python and SymPy. It checks the original and symmetry-averaged compact SOS representations, process validity, the witness, the ordered decomposition along every valid Pauli basis direction, and the neighborhood constants. All checks use the supplied rational data and require neither optimization nor regeneration of the rational data. The reductions and proofs in Sections~\ref{sec:proof-map}--\ref{sec:robustness} establish coverage of arbitrary finite laboratory experiments; the pure-process structure theorem~\cite{Yokojima,Cyclic} supplies the link between causal nonseparability and the exclusion of finite pure dilations.
 
 \begin{thebibliography}{99}
 \bibitem{Stinespring} W. F. Stinespring, Positive functions on $C^*$-algebras, \href{https://doi.org/10.1090/S0002-9939-1955-0069403-4}{Proc. Am. Math. Soc. \textbf{6}, 211 (1955)}.

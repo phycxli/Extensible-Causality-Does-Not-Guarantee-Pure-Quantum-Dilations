@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite this repository and the accompanying manuscript when using these certificates or verifiers."
+message: "Please cite this repository and the accompanying manuscript when using these rational data or verifiers."
 type: software
 title: "Extensible Causality Does Not Guarantee Pure Quantum Dilations: Exact Verification Code"
 authors:
@@ -15,4 +15,4 @@ authors:
 repository-code: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
 url: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
 license: MIT
-abstract: "Saved rational certificates and independent exact verifiers for a full-rank bipartite qubit process that is extensibly causal but has no finite pure-process dilation, with an exact white-noise threshold and a conservative perturbation neighborhood."
+abstract: "Saved rational SOS data and independent exact verifiers for a full-rank bipartite qubit process that is extensibly causal but has no finite pure-process dilation, with an exact white-noise threshold and a conservative perturbation neighborhood."
