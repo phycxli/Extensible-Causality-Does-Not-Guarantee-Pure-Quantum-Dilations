@@ -7,11 +7,14 @@ authors:
     given-names: Chengxi
   - family-names: Zhu
     given-names: Hao
+    email: haozhu4012@163.com
   - family-names: Liu
     given-names: Kai
   - family-names: Sun
     given-names: Wanzi
-    email: wzsun@jnxy.edu.cn
+    email: sunwanzi17@mails.ucas.edu.cn
+  - family-names: Liu
+    given-names: Wuming
 repository-code: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
 url: "https://github.com/phycxli/Extensible-Causality-Does-Not-Guarantee-Pure-Quantum-Dilations"
 license: MIT

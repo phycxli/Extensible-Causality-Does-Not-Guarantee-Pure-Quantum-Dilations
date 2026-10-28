@@ -1,8 +1,10 @@
 # Extensible Causality Does Not Guarantee Pure Quantum Dilations
 
 Exact rational data and independent verification code accompanying the
-manuscript by **Chengxi Li, Hao Zhu, Kai Liu, and Wanzi Sun**.
-Correspondence: **Wanzi Sun**, wzsun@jnxy.edu.cn.
+manuscript by **Chengxi Li, Hao Zhu, Kai Liu, Wanzi Sun, and Wuming Liu**.
+Corresponding authors: **Wanzi Sun**, sunwanzi17@mails.ucas.edu.cn;
+**Hao Zhu**, haozhu4012@163.com.
+Primary submission contact: **Wanzi Sun**, sunwanzi17@mails.ucas.edu.cn.
 
 The work constructs a full-rank process on four qubit ports whose probability
 records remain causal under arbitrary finite shared-input extensions, although

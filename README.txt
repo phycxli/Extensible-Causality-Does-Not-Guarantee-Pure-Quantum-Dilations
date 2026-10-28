@@ -1,7 +1,9 @@
 EXACT VERIFICATION: EXTENSIBLE CAUSALITY DOES NOT GUARANTEE PURE QUANTUM DILATIONS
 
-Authors: Chengxi Li, Hao Zhu, Kai Liu, and Wanzi Sun.
-Corresponding author: Wanzi Sun, wzsun@jnxy.edu.cn.
+Authors: Chengxi Li, Hao Zhu, Kai Liu, Wanzi Sun, and Wuming Liu.
+Corresponding authors: Wanzi Sun, sunwanzi17@mails.ucas.edu.cn;
+Hao Zhu, haozhu4012@163.com.
+Primary submission contact: Wanzi Sun, sunwanzi17@mails.ucas.edu.cn.
 
 Requirements: Python 3.10 or later and SymPy 1.14.0.
 From the extracted distribution root:
